@@ -1,8 +1,8 @@
 import React from "react";
 
-const navbar = () => {
+const Header = () => {
   return (
-    <div className="navbar bg-base-100">
+    <header className="navbar border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem]">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,8 +72,8 @@ const navbar = () => {
       <div className="navbar-end">
         <a className="btn">Button</a>
       </div>
-    </div>
+    </header>
   );
 };
 
-export default navbar;
+export default Header;
