@@ -1,10 +1,25 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiFigma,
+  SiFramer,
+  SiGithub,
+  SiMongodb,
+  SiNextdotjs,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 
 export const links = [
   {
@@ -85,23 +100,57 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  {
+    title: "HTML",
+    image: React.createElement(SiHtml5),
+  },
+  {
+    title: "CSS",
+    image: React.createElement(SiCss3),
+  },
+  {
+    title: "JavaScript",
+    image: React.createElement(SiJavascript),
+  },
+  {
+    title: "TypeScript",
+    image: React.createElement(SiTypescript),
+  },
+  {
+    title: "React",
+    image: React.createElement(SiReact),
+  },
+  {
+    title: "Next.js",
+    image: React.createElement(SiNextdotjs),
+  },
+  {
+    title: "Tailwind",
+    image: React.createElement(SiTailwindcss),
+  },
+  {
+    title: "Github",
+    image: React.createElement(SiGithub),
+  },
+
+  {
+    title: "MongoDB",
+    image: React.createElement(SiMongodb),
+  },
+  {
+    title: "Framer",
+    image: React.createElement(SiFramer),
+  },
+  {
+    title: "Figma",
+    image: React.createElement(SiFigma),
+  },
+  {
+    title: "Illustrator",
+    image: React.createElement(SiAdobeillustrator),
+  },
+  {
+    title: "Photoshop",
+    image: React.createElement(SiAdobephotoshop),
+  },
 ] as const;
