@@ -13,13 +13,16 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
+  SiFirebase,
 } from "react-icons/si";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import fpt from "@/public/fpt.webp";
+import ada from "@/public/ada.webp";
+import capi from "@/public/capi.webp";
+import g2j from "@/public/g2j.png";
+import telos from "@/public/telos.webp";
 
 export const links = [
   {
@@ -50,28 +53,34 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    company: "FPT Software",
+    title: "UX Designer",
+    image: fpt,
+    date: "Jan 2021 - Now",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    company: "Go2Joy",
+    title: "Product Designer",
+    image: g2j,
+    date: "Mar 2020 - Dec 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    company: "ADA Agency",
+    title: "Graphic Designer",
+    image: ada,
+    date: "Nov 2019 - Feb 2020",
+  },
+  {
+    company: "Capi Academy",
+    title: "Mobile App Design Instructor",
+    image: capi,
+    date: "2021",
+  },
+  {
+    company: "Capi Academy",
+    title: "Figma Instructor",
+    image: telos,
+    date: "2020",
   },
 ] as const;
 
@@ -132,7 +141,10 @@ export const skillsData = [
     title: "Github",
     image: React.createElement(SiGithub),
   },
-
+  {
+    title: "Firebase",
+    image: React.createElement(SiFirebase),
+  },
   {
     title: "MongoDB",
     image: React.createElement(SiMongodb),
