@@ -77,7 +77,7 @@ export const experiencesData = [
     date: "2021",
   },
   {
-    company: "Capi Academy",
+    company: "Telos",
     title: "Figma Instructor",
     image: telos,
     date: "2020",

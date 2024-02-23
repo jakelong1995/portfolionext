@@ -16,7 +16,6 @@ export default function Experience() {
         {experiencesData.map((experience, index) => (
           <motion.li
             key={index}
-            className="gap-4"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
@@ -25,12 +24,12 @@ export default function Experience() {
             }}
             custom={index}
           >
-            <hr />
-            <div className="timeline-start text-gray-500">
+            <hr className="!h-6 !w-0.5" />
+            <div className="timeline-start text-gray-500 ">
               {experience.date}
             </div>
             <div className="timeline-middle">
-              <div className="w-12 h-12 flex items-center justify-center overflow-hidden border border-gray-200 rounded-full">
+              <div className="w-12 h-12 flex items-center justify-center overflow-hidden border border-gray-200 rounded-full m-2">
                 <Image src={experience.image} alt={experience.company}></Image>
               </div>
             </div>
@@ -40,7 +39,7 @@ export default function Experience() {
               </h2>
               <h3 className="text-gray-700">{experience.title}</h3>
             </div>
-            {index !== experiencesData.length - 1 && <hr />}
+            <hr className="!h-6 !w-0.5" />
           </motion.li>
         ))}
       </ul>
