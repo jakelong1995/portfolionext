@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FiArrowRight, FiDownload } from "react-icons/fi";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 import profile from "@/public/profile.png";
 
 export default function Intro() {
@@ -75,19 +75,19 @@ export default function Intro() {
         </a>
         <div className="flex gap-4">
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
+            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 hover:text-gray-950 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
             href="https://www.linkedin.com/in/jakelong1995/"
             target="_blank"
           >
-            <FaLinkedinIn />
+            <SiLinkedin />
           </a>
 
           <a
-            className="bg-white p-4 text-gray-700 flex items-center text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
+            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
             href="https://github.com/jakelong1995"
             target="_blank"
           >
-            <FaGithub />
+            <SiGithub />
           </a>
         </div>
       </motion.div>

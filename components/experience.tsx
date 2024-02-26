@@ -2,7 +2,7 @@
 
 import React from "react";
 import SectionHeading from "./section-heading";
-import { experiencesData, skillsData } from "@/lib/data";
+import { experiencesData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "./animation";
@@ -11,7 +11,6 @@ export default function Experience() {
   return (
     <section id="experience" className="mb-28 max-w-3xl scroll-mt-28">
       <SectionHeading>my experience</SectionHeading>
-
       <ul className="timeline timeline-vertical">
         {experiencesData.map((experience, index) => (
           <motion.li

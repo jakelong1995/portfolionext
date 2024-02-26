@@ -4,7 +4,14 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import Link from "next/link";
+import {
+  CardContent,
+  CardTitle,
+  CardDescription,
+  CardHeader,
+  Card,
+} from "@/components/ui/card";
 type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
@@ -28,59 +35,28 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
     >
-      {/* <section className="bg-gray-100 max-w-3xl border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section> */}
-      <div className="card lg:card-side bg-base-100 shadow-xl">
-        <figure>
+      {" "}
+      <Card>
+        <Link className="absolute inset-0 rounded-lg overflow-hidden" href="#">
+          <span className="sr-only">View</span>
+        </Link>
+        <CardContent className="p-0">
           <img
-            src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-            alt="Album"
+            alt="Project thumbnail"
+            className="aspect-video object-cover"
+            height="320"
+            src="/placeholder.svg"
+            width="640"
           />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">New album is released!</h2>
-          <p>Click the button to listen on Spotiwhy app.</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
-          </div>
-        </div>
-      </div>
+        </CardContent>
+        <CardHeader className="p-4">
+          <CardTitle className="text-xl font-semibold">Project One</CardTitle>
+          <CardDescription>
+            This is the first project description.
+          </CardDescription>
+        </CardHeader>
+      </Card>
     </motion.div>
   );
 }
