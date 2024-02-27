@@ -42,24 +42,26 @@ export default function Project({
           index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
         } `}
       >
-        <CardContent className="p-0 overflow-hidden w-full">
+        <CardContent className="p-0 overflow-hidden aspect-square w-full">
           <Image
             alt="Project thumbnail"
-            className=" object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            className=" object-cover aspect-square group-hover:scale-110 transition-transform duration-500 ease-in-out"
             src={imageUrl}
-            width={600}
-            height={600}
           />
         </CardContent>
         <CardHeader className="p-6 flex flex-col justify-between w-full">
           <div className="flex flex-col gap-2">
-            <CardTitle className="text-xl font-semibold">{title}</CardTitle>
-            <CardDescription>{description} </CardDescription>
+            <CardTitle className="text-xl font-semibold text-gray-700">
+              {title}
+            </CardTitle>
+            <CardDescription className="text-md">
+              {description}{" "}
+            </CardDescription>
           </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto py-2">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="bg-black/[0.7] px-3 py-1 text-xs uppercase tracking-wider text-white rounded-full dark:text-white/70"
                 key={index}
               >
                 {tag}
