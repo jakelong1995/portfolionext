@@ -42,20 +42,20 @@ export default function Project({
           index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
         } `}
       >
-        <Link className="absolute inset-0 overflow-hidden" href="#">
-          <span className="sr-only">View</span>
-        </Link>
-        <CardContent className="p-0 w-fit overflow-hidden">
+        <CardContent className="p-0 overflow-hidden w-full">
           <Image
             alt="Project thumbnail"
-            className="aspect-square object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
-            height="400"
+            className=" object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
             src={imageUrl}
+            width={600}
+            height={600}
           />
         </CardContent>
-        <CardHeader className="p-4 w-full">
-          <CardTitle className="text-xl font-semibold">{title}</CardTitle>
-          <CardDescription>{description} </CardDescription>
+        <CardHeader className="p-6 flex flex-col justify-between w-full">
+          <div className="flex flex-col gap-2">
+            <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+            <CardDescription>{description} </CardDescription>
+          </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto py-2">
             {tags.map((tag, index) => (
               <li
