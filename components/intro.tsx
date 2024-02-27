@@ -10,7 +10,7 @@ import profile from "@/public/profile.png";
 
 export default function Intro() {
   return (
-    <section className="flex-col max-w-3xl flex gap-8">
+    <section id="home" className="scroll-mt-96 flex-col max-w-3xl flex gap-8">
       <div className="flex flex-col md:flex-row items-center h-fit px-4 py-8 justify-between mx-auto sm:gap-8">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}

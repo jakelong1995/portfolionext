@@ -14,6 +14,8 @@ import {
   SiTailwindcss,
   SiTypescript,
   SiFirebase,
+  SiExpress,
+  SiPostman,
 } from "react-icons/si";
 import demo from "@/public/demo.png";
 import fpt from "@/public/fpt.webp";
@@ -149,6 +151,14 @@ export const skillsData = [
   {
     title: "Firebase",
     image: React.createElement(SiFirebase),
+  },
+  {
+    title: "Express",
+    image: React.createElement(SiExpress),
+  },
+  {
+    title: "Postman",
+    image: React.createElement(SiPostman),
   },
   {
     title: "MongoDB",
