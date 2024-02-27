@@ -19,6 +19,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  index,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -27,7 +28,6 @@ export default function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
   return (
     <motion.div
       ref={ref}
@@ -37,17 +37,20 @@ export default function Project({
       }}
     >
       {" "}
-      <Card className="flex">
-        <Link className="absolute inset-0 rounded-lg overflow-hidden" href="#">
+      <Card
+        className={`group flex flex-col overflow-hidden bg-gray-50 hover:bg-gray-200 ${
+          index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
+        } `}
+      >
+        <Link className="absolute inset-0 overflow-hidden" href="#">
           <span className="sr-only">View</span>
         </Link>
-        <CardContent className="p-0 w-full">
+        <CardContent className="p-0 w-fit overflow-hidden">
           <Image
             alt="Project thumbnail"
-            className="aspect-video object-cover"
-            height="320"
+            className="aspect-square object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            height="400"
             src={imageUrl}
-            width="640"
           />
         </CardContent>
         <CardHeader className="p-4 w-full">

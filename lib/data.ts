@@ -15,7 +15,7 @@ import {
   SiTypescript,
   SiFirebase,
 } from "react-icons/si";
-import corpcommentImg from "@/public/corpcomment.png";
+import placeholder from "@/public/placeholder.svg";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import fpt from "@/public/fpt.webp";
@@ -86,18 +86,18 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Invi",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    tags: ["React", "UI UX", "Tailwind"],
+    imageUrl: placeholder,
   },
   {
     title: "CorpComment",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    imageUrl: placeholder,
   },
   {
     title: "rmtDev",

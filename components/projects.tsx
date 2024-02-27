@@ -8,10 +8,10 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My projects</SectionHeading>
-      <div className="container flex-col flex max-w-3xl gap-4 px-4">
+      <div className="flex-col flex max-w-3xl gap-6">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <Project {...project} index={index} />
           </React.Fragment>
         ))}
       </div>

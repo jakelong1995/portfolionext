@@ -24,7 +24,11 @@ export default function Experience() {
             custom={index}
           >
             <hr className="!h-6 !w-0.5" />
-            <div className="timeline-start text-gray-500 ">
+            <div
+              className={`${
+                index % 2 === 0 ? "timeline-start" : "timeline-end"
+              } text-gray-500`}
+            >
               {experience.date}
             </div>
             <div className="timeline-middle">
@@ -32,7 +36,11 @@ export default function Experience() {
                 <Image src={experience.image} alt={experience.company}></Image>
               </div>
             </div>
-            <div className="timeline-end timeline-box">
+            <div
+              className={`${
+                index % 2 === 0 ? "timeline-end" : "timeline-start"
+              } timeline-box`}
+            >
               <h2 className="text-gray-700 font-semibold">
                 {experience.company}
               </h2>
