@@ -39,13 +39,13 @@ export default function Project({
       {" "}
       <Card
         className={`group flex flex-col overflow-hidden bg-gray-50 hover:bg-gray-200 ${
-          index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row"
+          index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row "
         } `}
       >
-        <CardContent className="p-0 overflow-hidden aspect-square w-full">
+        <CardContent className="p-0 overflow-hidden w-full">
           <Image
             alt="Project thumbnail"
-            className=" object-cover aspect-square group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            className=" object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
             src={imageUrl}
           />
         </CardContent>
