@@ -33,7 +33,7 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-3xl pt-6 sm:pt-0">
-            Hi I'm <span className="font-semibold">Hoang Long!</span>
+            Hi I&apos;m <span className="font-semibold">Hoang Long!</span>
           </h1>
 
           <p className="text-xl !leading-[1.5] ">
