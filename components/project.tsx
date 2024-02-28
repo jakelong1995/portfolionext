@@ -12,7 +12,7 @@ import {
   CardHeader,
   Card,
 } from "@/components/ui/card";
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number] & { index: number };
 
 export default function Project({
   title,
