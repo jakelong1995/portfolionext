@@ -14,7 +14,7 @@ export default function Skills() {
         {skillsData.map((skill, index) => (
           <motion.li
             key={index}
-            className=" w-24 h-24 flex flex-col gap-2 justify-center items-center p-2 dark:bg-white/10 dark:text-white/80"
+            className=" w-24 h-24 flex flex-col gap-2 justify-center items-center p-2"
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
