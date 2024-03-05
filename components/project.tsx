@@ -5,13 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import {
-  CardContent,
-  CardTitle,
-  CardDescription,
-  CardHeader,
-  Card,
-} from "@/components/ui/card";
+
 type ProjectProps = (typeof projectsData)[number] & { index: number };
 
 export default function Project({
@@ -19,6 +13,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  link,
   index,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -37,39 +32,37 @@ export default function Project({
       }}
     >
       {" "}
-      <Card
-        className={`group flex flex-col overflow-hidden bg-gray-50 hover:bg-gray-200 ${
+      <Link
+        href={link}
+        target="_blank"
+        className={`group flex flex-col overflow-hidden bg-gray-100 hover:bg-gray-200 rounded-xl ${
           index % 2 === 0 ? "sm:flex-row-reverse" : "sm:flex-row "
         } `}
       >
-        <CardContent className="p-0 overflow-hidden w-full">
+        <div className="p-0 overflow-hidden w-full">
           <Image
             alt="Project thumbnail"
             className=" object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
             src={imageUrl}
           />
-        </CardContent>
-        <CardHeader className="p-6 flex flex-col justify-between w-full">
-          <div className="flex flex-col gap-2">
-            <CardTitle className="text-xl font-semibold text-gray-700">
-              {title}
-            </CardTitle>
-            <CardDescription className="text-md">
-              {description}{" "}
-            </CardDescription>
+        </div>
+        <div className="p-6 flex flex-col justify-between w-full">
+          <div className="flex flex-col gap-4 text-gray-700">
+            <h2 className="text-xl font-semibold">{title}</h2>
+            <p className="text-md">{description} </p>
           </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto py-2">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-xs uppercase tracking-wider text-white rounded-full"
+                className="bg-gray-600 px-3 py-1 text-xs uppercase tracking-wider text-white rounded-full"
                 key={index}
               >
                 {tag}
               </li>
             ))}
           </ul>
-        </CardHeader>
-      </Card>
+        </div>
+      </Link>
     </motion.div>
   );
 }

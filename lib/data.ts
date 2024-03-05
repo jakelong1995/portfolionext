@@ -23,6 +23,10 @@ import ada from "@/public/ada.webp";
 import capi from "@/public/capi.webp";
 import g2j from "@/public/g2j.png";
 import telos from "@/public/telos.webp";
+import healthy from "@/public/Healthy-casestudy.png";
+import vuifest from "@/public/vuifest.png";
+import greensolution from "@/public/greensolution.png";
+import NRI from "@/public/NRIJapan.png";
 
 export const links = [
   {
@@ -78,32 +82,34 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Invi",
-    description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "UI UX", "Tailwind"],
-    imageUrl: demo,
+    title: "Healthy",
+    description: `Healthy is an app that help patient to book appoint with doctors in hospital and medical center around Ho Chi Minh City. Healthy helps patients avoid queue at hospitals and doctors prepare better for the patients.`,
+    tags: ["UI Design", "UX Research", "Mobile App"],
+    link: "https://www.behance.net/gallery/114150753/Healthy-Doctor-Appointment-app",
+    imageUrl: healthy,
   },
   {
-    title: "CorpComment",
+    title: "Vuifest",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: demo,
+      "Vuifest is an internal web project for a music festival in FPT",
+    tags: ["UI Design", "Graphic Design", "Web App"],
+    link: "https://www.behance.net/gallery/163175735/Vuifest",
+    imageUrl: vuifest,
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: demo,
+    title: "Green Solutions",
+    description: "Green energy landing page.",
+    tags: ["UI Design", "Landing Page"],
+    link: "https://www.behance.net/gallery/192140411/Grid-Solutions",
+    imageUrl: greensolution,
   },
   {
-    title: "Word Analytics",
+    title: "NRI Japan",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: demo,
+      "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
+    tags: ["UI Design", "UX Design", "Web App"],
+    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
+    imageUrl: NRI,
   },
 ] as const;
 
