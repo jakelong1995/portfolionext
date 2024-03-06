@@ -66,7 +66,8 @@ export default function Intro() {
 
         <a
           className=" bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  shadow-sm"
-          href="/public/Resume-Tran-Minh-Hoang-Long.pdf"
+          href="https://1drv.ms/b/s!Agi6lanJu3IHipNDnmfyZJcd__qlKg?e=DUpoxp"
+          target="_blank"
           download
         >
           Download CV <FiDownload className="opacity-80 " />
