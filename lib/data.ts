@@ -17,7 +17,7 @@ import {
   SiExpress,
   SiPostman,
 } from "react-icons/si";
-import demo from "@/public/demo.png";
+
 import fpt from "@/public/fpt.webp";
 import ada from "@/public/ada.webp";
 import capi from "@/public/capi.webp";
@@ -27,6 +27,8 @@ import healthy from "@/public/Healthy-casestudy.png";
 import vuifest from "@/public/vuifest.png";
 import greensolution from "@/public/greensolution.png";
 import NRI from "@/public/NRIJapan.png";
+import BFI from "@/public/BFI Finance.png";
+import Pyxissafe from "@/public/PyxisSafe.png";
 
 export const links = [
   {
@@ -82,11 +84,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Healthy",
-    description: `Healthy is an app that help patient to book appoint with doctors in hospital and medical center around Ho Chi Minh City. Healthy helps patients avoid queue at hospitals and doctors prepare better for the patients.`,
-    tags: ["UI Design", "UX Research", "Mobile App"],
-    link: "https://www.behance.net/gallery/114150753/Healthy-Doctor-Appointment-app",
-    imageUrl: healthy,
+    title: "BFI Finance - Bike Collaterals",
+    description:
+      "PT BFI Finance Indonesia Tbk (BFI) was established in 1982 as PT Manufacturers Hanover Leasing Indonesia, a joint venture between Manufacturers Hanover Leasing Corporation from the United States and local partners. This is a B2C app for using bike as Collaterals",
+    tags: ["UI Design", "UX Design", "Web App"],
+    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNscdl-FVK5XP1kiQ?e=pZaGPK",
+    imageUrl: BFI,
+  },
+  {
+    title: "NRI Japan",
+    description:
+      "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
+    tags: ["UI Design", "UX Design", "Web App"],
+    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
+    imageUrl: NRI,
   },
   {
     title: "Vuifest",
@@ -97,6 +108,13 @@ export const projectsData = [
     imageUrl: vuifest,
   },
   {
+    title: "Pyxis Safe",
+    description: "The Multi-Signature Safe of the Multichain",
+    tags: ["UI Design", "Graphic Design", "Landing Page"],
+    link: "https://pyxis.aura.network/",
+    imageUrl: Pyxissafe,
+  },
+  {
     title: "Green Solutions",
     description: "Green energy landing page.",
     tags: ["UI Design", "Landing Page"],
@@ -104,12 +122,11 @@ export const projectsData = [
     imageUrl: greensolution,
   },
   {
-    title: "NRI Japan",
-    description:
-      "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
-    tags: ["UI Design", "UX Design", "Web App"],
-    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
-    imageUrl: NRI,
+    title: "Healthy",
+    description: `Healthy is an app that help patient to book appoint with doctors in hospital and medical center around Ho Chi Minh City. Healthy helps patients avoid queue at hospitals and doctors prepare better for the patients.`,
+    tags: ["UI Design", "UX Research", "Mobile App"],
+    link: "https://www.behance.net/gallery/114150753/Healthy-Doctor-Appointment-app",
+    imageUrl: healthy,
   },
 ] as const;
 
