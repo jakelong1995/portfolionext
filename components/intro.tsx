@@ -45,8 +45,7 @@ export default function Intro() {
             </span>{" "}
             with <span className="font-semibold">4 years</span> of experience. I
             enjoy building{" "}
-            <span className="italic">usable & aesthetic websites</span>. My
-            focus is <span className="underline">React (Next.js)</span>.
+            <span className="italic">usable & aesthetic websites</span>
           </p>
         </motion.div>
       </div>
