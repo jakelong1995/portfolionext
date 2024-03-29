@@ -10,7 +10,10 @@ import profile from "@/public/profile.png";
 
 export default function Intro() {
   return (
-    <section id="home" className="scroll-mt-96 flex-col max-w-3xl flex gap-8">
+    <section
+      id="home"
+      className="scroll-mt-96 flex-col max-w-3xl flex gap-8  mb-28"
+    >
       <div className="flex flex-col md:flex-row items-center h-fit px-4 py-8 justify-between mx-auto sm:gap-8">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -55,31 +58,31 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
+        {/* <Link
           href="#contact"
           className=" bg-gray-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-900 active:scale-105 transition shadow-sm"
         >
           Contact me <FiArrowRight className="opacity-80 " />
-        </Link>
+        </Link> */}
 
         <a
-          className=" bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 shadow-sm"
-          href="/CV.pdf"
+          className=" bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack  shadow-sm"
+          href="https://1drv.ms/b/s!Agi6lanJu3IHipNDnmfyZJcd__qlKg?e=DUpoxp"
+          target="_blank"
           download
         >
           Download CV <FiDownload className="opacity-80 " />
         </a>
         <div className="flex gap-4">
           <a
-            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 hover:text-gray-950 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
+            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 hover:text-gray-950 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack shadow-sm"
             href="https://www.linkedin.com/in/jakelong1995/"
             target="_blank"
           >
             <SiLinkedin />
           </a>
-
           <a
-            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 shadow-sm"
+            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack shadow-sm"
             href="https://github.com/jakelong1995"
             target="_blank"
           >
