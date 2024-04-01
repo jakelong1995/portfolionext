@@ -23,11 +23,11 @@ export default function Experience() {
             }}
             custom={index}
           >
-            <hr className="!h-6 !w-0.5" />
+            <hr className="!w-0.5" />
             <div
               className={`${
                 index % 2 === 0 ? "timeline-start" : "timeline-end"
-              } text-gray-500`}
+              } text-gray-500 !my-4`}
             >
               {experience.date}
             </div>
@@ -39,14 +39,14 @@ export default function Experience() {
             <div
               className={`${
                 index % 2 === 0 ? "timeline-end" : "timeline-start"
-              } timeline-box`}
+              } timeline-box !my-4`}
             >
               <h2 className="text-gray-700 font-semibold">
                 {experience.company}
               </h2>
               <h3 className="text-gray-700">{experience.title}</h3>
             </div>
-            <hr className="!h-6 !w-0.5" />
+            <hr className="!w-0.5" />
           </motion.li>
         ))}
       </ul>
