@@ -6,7 +6,6 @@ import {
   CardHeader,
   Card,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import SectionHeading from "./section-heading";
