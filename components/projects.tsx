@@ -13,7 +13,7 @@ import SectionHeading from "./section-heading";
 
 export default function Projects() {
   return (
-    <section className="w-full py-12 md:py-16">
+    <section id="projects" className="w-full py-12 md:py-16">
       <div className="container grid max-w-6xl gap-4 px-4 md:gap-8 md:px-6">
         <SectionHeading>Featured Projects</SectionHeading>
 
