@@ -4,10 +4,10 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FiArrowRight, FiDownload } from "react-icons/fi";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Intro() {
   return (
@@ -28,11 +28,12 @@ export default function Intro() {
             src={profile}
             alt="profilepic"
             priority={true}
-            className="rounded-full object-cover w-48 h-fit border-[0.3rem] border-white shadow-lg"
+            className="rounded-full object-cover w-48 h-fit border-[0.3rem] border-white dark:border-slate-700 shadow-lg"
           />
         </motion.div>
+
         <motion.div
-          className="w-full flex-col flex gap-4 text-gray-700 text-center max-w-md sm:text-left !leading-[1.5]"
+          className="w-full flex-col flex gap-4 text-center md:text-left max-w-md !leading-[1.5]"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -52,43 +53,33 @@ export default function Intro() {
         </motion.div>
       </div>
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg"
+        className="flex flex-wrap items-center justify-center gap-4 px-4 text-lg"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        {/* <Link
-          href="#contact"
-          className=" bg-gray-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-900 active:scale-105 transition shadow-sm"
-        >
-          Contact me <FiArrowRight className="opacity-80 " />
-        </Link> */}
+        <Button asChild>
+          <Link href="#contact">
+            Contact me <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
 
-        <Link
-          href="https://1drv.ms/b/s!Agi6lanJu3IHipNDnmfyZJcd__qlKg?e=DUpoxp"
-          target="_blank"
-          download
-        >
-          Download CV <FiDownload className="opacity-80 " />
-        </Link>
-        <div className="flex gap-4">
-          <a
-            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 hover:text-gray-950 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack shadow-sm"
+        <Button size={"icon"} variant={"secondary"} asChild>
+          <Link
             href="https://www.linkedin.com/in/jakelong1995/"
             target="_blank"
           >
-            <SiLinkedin />
-          </a>
-          <a
-            className="bg-white h-[52px] w-[52px] justify-center text-gray-700 flex items-center rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack shadow-sm"
-            href="https://github.com/jakelong1995"
-            target="_blank"
-          >
-            <SiGithub />
-          </a>
-        </div>
+            <SiLinkedin className="h-4 w-4" />
+          </Link>
+        </Button>
+
+        <Button size={"icon"} variant={"secondary"} asChild>
+          <Link href="https://github.com/jakelong1995" target="_blank">
+            <SiGithub className="h-4 w-4" />
+          </Link>
+        </Button>
       </motion.div>
     </section>
   );

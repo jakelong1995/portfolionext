@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body
-        className={`${inter.className}bg-gray-50 text-gray-950 relative pt-28 sm:pt-36`}
-      >
+      <body className={`${inter.className} relative pt-28 sm:pt-36`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,9 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header></Header>
-          <div className="fixed right-16 bottom-16">
-            <ModeToggle></ModeToggle>
-          </div>
+          <ModeToggle />
           {children}{" "}
         </ThemeProvider>
       </body>
