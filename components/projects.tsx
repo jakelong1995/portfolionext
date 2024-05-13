@@ -13,6 +13,7 @@ import Image from "next/image";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
+import { fadeInAnimationVariants } from "./animation";
 
 export default function Projects() {
   return (
@@ -23,6 +24,13 @@ export default function Projects() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 h-auto">
           {projectsData.map((project, index) => (
             <motion.div
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
               whileHover={{ scale: 1.05 }} // Zoom in when hovered over
               transition={{ duration: 0.3 }} // Transition duration
             >
