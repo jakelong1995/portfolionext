@@ -100,7 +100,7 @@ export const projectsData = [
       "Web App",
       "Mobile App",
     ],
-    link: "fefyfo.com",
+    link: "https://fefyfo.com/",
     imageUrl: fefyfo,
   },
   {
