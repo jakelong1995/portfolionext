@@ -11,7 +11,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mb-28 max-w-3xl scroll-mt-28">
       <SectionHeading>my experience</SectionHeading>
-      <ul className="timeline timeline-vertical">
+      <ul className="space-y-8">
         {experiencesData.map((experience, index) => (
           <motion.li
             key={index}
@@ -23,30 +23,32 @@ export default function Experience() {
             }}
             custom={index}
           >
-            <hr className="!w-0.5" />
-            <div
-              className={`${
-                index % 2 === 0 ? "timeline-start" : "timeline-end"
-              } text-gray-500 !my-4`}
-            >
-              {experience.date}
-            </div>
-            <div className="timeline-middle">
-              <div className="w-12 h-12 flex items-center justify-center overflow-hidden border border-gray-200 rounded-full m-2">
-                <Image src={experience.image} alt={experience.company}></Image>
+            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6">
+              <Image
+                alt={experience.title}
+                height={48}
+                src={experience.image}
+                style={{
+                  aspectRatio: "1/1",
+                  objectFit: "contain",
+                }}
+                width={48}
+                className="rounded-full shadow w-12 h-12"
+              />
+              <div className="flex flex-col space-y-2">
+                <h3 className="text-xl font-semibold">{experience.title}</h3>
+                <div className="flex space-x-2 text-gray-500 dark:text-gray-400">
+                  <span>{experience.company}</span>
+                  <span>•</span>
+                  <span>{experience.date}</span>
+                </div>
+                {/* <p className="text-gray-600 dark:text-gray-300">
+                  Developed and maintained cutting-edge web applications using
+                  the latest technologies. Collaborated with cross-functional
+                  teams to deliver high-quality, user-centric solutions.
+                </p> */}
               </div>
             </div>
-            <div
-              className={`${
-                index % 2 === 0 ? "timeline-end" : "timeline-start"
-              } timeline-box !my-4`}
-            >
-              <h2 className="text-gray-700 font-semibold">
-                {experience.company}
-              </h2>
-              <h3 className="text-gray-700">{experience.title}</h3>
-            </div>
-            <hr className="!w-0.5" />
           </motion.li>
         ))}
       </ul>

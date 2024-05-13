@@ -29,6 +29,9 @@ import greensolution from "@/public/greensolution.png";
 import NRI from "@/public/NRIJapan.png";
 import BFI from "@/public/BFI Finance.png";
 import Pyxissafe from "@/public/PyxisSafe.png";
+import songphi from "@/public/songphi.png";
+import sieuthimaypin from "@/public/sieuthimaypin.jpeg";
+import fefyfo from "@/public/fefyfo.jpg";
 
 export const links = [
   {
@@ -47,6 +50,10 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
+  // {
+  //   name: "Contact",
+  //   hash: "#contact",
+  // },
 ] as const;
 
 export const experiencesData = [
@@ -84,10 +91,39 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Fefyfo - Your Imagination - Your Story",
+    description: "A library of custom story create by your imagination.",
+    tags: [
+      "UI-UX",
+      "Brand Identity",
+      "Graphic Design",
+      "Web App",
+      "Mobile App",
+    ],
+    link: "fefyfo.com",
+    imageUrl: fefyfo,
+  },
+  {
+    title: "Gia Phúc Ân - Siêu Thị Máy Pin",
+    description:
+      "Trải qua hơn 23 năm hình thành và phát triển, Gia Phúc Ân đã vươn lên trở thành đơn vị dẫn đầu trong ngành sản xuất và kinh doanh vật liệu hàn.",
+    tags: ["UI-UX", "Development", "E-com"],
+    link: "https://sieuthimaypin.com/",
+    imageUrl: sieuthimaypin,
+  },
+  {
+    title: "Songphi Brows",
+    description:
+      "SongPhi Brows, established in April 2020, is among the top 10 Eyebrow Embroidery providers in Singapore.",
+    tags: ["UI-UX", "Development", "Landing Page"],
+    link: "https://songphibrowsg.com/",
+    imageUrl: songphi,
+  },
+  {
     title: "BFI Finance - Bike Collaterals",
     description:
-      "PT BFI Finance Indonesia Tbk (BFI) was established in 1982 as PT Manufacturers Hanover Leasing Indonesia, a joint venture between Manufacturers Hanover Leasing Corporation from the United States and local partners. This is a B2C app for using bike as Collaterals",
-    tags: ["UI Design", "UX Design", "Web App"],
+      "PT BFI Finance Indonesia Tbk (BFI) was established in 1982 as PT Manufacturers Hanover Leasing Indonesia, a joint venture between Manufacturers Hanover Leasing Corporation from the United States and local partners.",
+    tags: ["UI-UX", "Web App"],
     link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNscdl-FVK5XP1kiQ?e=pZaGPK",
     imageUrl: BFI,
   },
@@ -95,7 +131,7 @@ export const projectsData = [
     title: "NRI Japan",
     description:
       "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
-    tags: ["UI Design", "UX Design", "Web App"],
+    tags: ["UI-UX", "Web App"],
     link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
     imageUrl: NRI,
   },
@@ -103,7 +139,7 @@ export const projectsData = [
     title: "Vuifest",
     description:
       "Vuifest is an internal web project for a music festival in FPT",
-    tags: ["UI Design", "Graphic Design", "Web App"],
+    tags: ["UI-UX", "Graphic", "Web App"],
     link: "https://www.behance.net/gallery/163175735/Vuifest",
     imageUrl: vuifest,
   },

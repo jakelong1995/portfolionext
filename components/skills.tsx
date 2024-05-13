@@ -23,8 +23,8 @@ export default function Skills() {
             }}
             custom={index}
           >
-            <div className="text-3xl text-gray-700">{skill.image}</div>
-            <div className="text-sm text-gray-500">{skill.title}</div>
+            <div className="text-3xl">{skill.image}</div>
+            <div className="text-sm">{skill.title}</div>
           </motion.li>
         ))}
       </ul>
