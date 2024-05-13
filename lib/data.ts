@@ -31,7 +31,7 @@ import BFI from "@/public/BFI Finance.png";
 import Pyxissafe from "@/public/PyxisSafe.png";
 import songphi from "@/public/songphi.png";
 import sieuthimaypin from "@/public/sieuthimaypin.jpeg";
-import fefyfo from "@/public/fefyfo.jpg";
+import fefyfo from "@/public/Fefyfo.jpg";
 
 export const links = [
   {
