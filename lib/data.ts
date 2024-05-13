@@ -199,10 +199,10 @@ export const skillsData = [
     title: "Github",
     image: React.createElement(SiGithub),
   },
-  {
-    title: "Firebase",
-    image: React.createElement(SiFirebase),
-  },
+  // {
+  //   title: "Firebase",
+  //   image: React.createElement(SiFirebase),
+  // },
   {
     title: "Express",
     image: React.createElement(SiExpress),
