@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Headerv2 } from "@/components/headerv2";
+import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
 import ActiveSectionContextProvider, {
@@ -34,8 +35,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ActiveSectionContextProvider>
-            <Headerv2 />
-            <ModeToggle />
+            <Header />
+            {/* <Headerv2 /> */}
+            {/* <ModeToggle /> */}
             {children}{" "}
           </ActiveSectionContextProvider>
         </ThemeProvider>

@@ -12,6 +12,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
+import { Badge } from "./ui/badge";
 
 export default function Projects() {
   return (
@@ -25,23 +26,34 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }} // Zoom in when hovered over
               transition={{ duration: 0.3 }} // Transition duration
             >
-              <Link key={index} href={project.link}>
+              <Link key={index} href={project.link} target="_blank">
                 <span className="sr-only">View {project.title}</span>
                 <Card className="h-full overflow-hidden">
                   <CardContent className="p-0">
                     <Image
                       alt={project.title} // Use the name from the project data
                       className="aspect-video object-cover"
-                      height="320"
+                      height="360"
                       src={project.imageUrl} // Use the image from the project data
                       width="640"
                     />
                   </CardContent>
-                  <CardHeader className="p-4">
+                  <CardHeader className="gap-1 p-4">
                     <CardTitle className="text-xl font-semibold">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="line-clamp-2">
+                    <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+                      {project.tags.map((tag, index) => (
+                        <Badge
+                          key={index}
+                          className="whitespace-nowrap"
+                          variant="secondary"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <CardDescription className="line-clamp-3">
                       {project.description}
                     </CardDescription>
                   </CardHeader>

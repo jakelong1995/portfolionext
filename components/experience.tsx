@@ -33,7 +33,7 @@ export default function Experience() {
                   objectFit: "contain",
                 }}
                 width={48}
-                className="rounded-[0.5rem] shadow w-12 h-12"
+                className="rounded-full shadow w-12 h-12"
               />
               <div className="flex flex-col space-y-2">
                 <h3 className="text-xl font-semibold">{experience.title}</h3>

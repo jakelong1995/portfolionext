@@ -7,7 +7,6 @@ import Link from "next/link";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
 
 export default function Intro() {
   return (
@@ -60,13 +59,18 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Button asChild>
+        {/* <Button asChild className="rounded-full">
           <Link href="#contact">
             Contact me <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
-        </Button>
+        </Button> */}
 
-        <Button size={"icon"} variant={"secondary"} asChild>
+        <Button
+          size={"icon"}
+          variant={"secondary"}
+          asChild
+          className="rounded-full bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800"
+        >
           <Link
             href="https://www.linkedin.com/in/jakelong1995/"
             target="_blank"
@@ -75,7 +79,12 @@ export default function Intro() {
           </Link>
         </Button>
 
-        <Button size={"icon"} variant={"secondary"} asChild>
+        <Button
+          size={"icon"}
+          variant={"secondary"}
+          asChild
+          className="rounded-full bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800"
+        >
           <Link href="https://github.com/jakelong1995" target="_blank">
             <SiGithub className="h-4 w-4" />
           </Link>
