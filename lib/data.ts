@@ -50,10 +50,10 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  // {
-  //   name: "Contact",
-  //   hash: "#contact",
-  // },
+  {
+    name: "Contact",
+    hash: "#contact",
+  },
 ] as const;
 
 export const experiencesData = [
