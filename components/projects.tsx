@@ -23,7 +23,7 @@ export default function Projects() {
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 h-auto">
           {projectsData.map((project, index) => (
-            <motion.div
+            <motion.li
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView="animate"
@@ -31,10 +31,11 @@ export default function Projects() {
                 once: true,
               }}
               custom={index}
+              key={index}
               whileHover={{ scale: 1.05 }} // Zoom in when hovered over
               transition={{ duration: 0.3 }} // Transition duration
             >
-              <Link key={index} href={project.link} target="_blank">
+              <Link href={project.link} target="_blank">
                 <span className="sr-only">View {project.title}</span>
                 <Card className="h-full overflow-hidden">
                   <CardContent className="p-0">
@@ -67,7 +68,7 @@ export default function Projects() {
                   </CardHeader>
                 </Card>
               </Link>
-            </motion.div>
+            </motion.li>
           ))}
         </ul>
       </div>

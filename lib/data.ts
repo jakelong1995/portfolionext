@@ -100,7 +100,7 @@ export const projectsData = [
       "Web App",
       "Mobile App",
     ],
-    link: "fefyfo.com",
+    link: "https://fefyfo.com/",
     imageUrl: fefyfo,
   },
   {
@@ -199,10 +199,10 @@ export const skillsData = [
     title: "Github",
     image: React.createElement(SiGithub),
   },
-  {
-    title: "Firebase",
-    image: React.createElement(SiFirebase),
-  },
+  // {
+  //   title: "Firebase",
+  //   image: React.createElement(SiFirebase),
+  // },
   {
     title: "Express",
     image: React.createElement(SiExpress),
