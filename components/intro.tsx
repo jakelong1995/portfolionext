@@ -59,10 +59,12 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Button asChild className="rounded-full h-12">
+        <Button
+          asChild
+          className="rounded-full h-12 transform transition-transform hover:scale-110"
+        >
           <Link href="#contact">
-            Contact me{" "}
-            <ArrowRight className="ml-2 h-4 w-4 transform transition-transform hover:scale-110" />
+            Contact me <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
 
