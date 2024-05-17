@@ -37,7 +37,7 @@ export default function Projects() {
             >
               <Link href={project.link} target="_blank">
                 <span className="sr-only">View {project.title}</span>
-                <Card className="h-full overflow-hidden">
+                <Card className="h-full overflow-hidden dark:bg-gray-900">
                   <CardContent className="p-0">
                     <Image
                       alt={project.title} // Use the name from the project data

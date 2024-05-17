@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Headerv2 } from "@/components/headerv2";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
 import ActiveSectionContextProvider, {
   ActiveSectionContext,
 } from "@/components/ui/active-section-context";
@@ -36,8 +34,6 @@ export default function RootLayout({
         >
           <ActiveSectionContextProvider>
             <Header />
-            {/* <Headerv2 /> */}
-            {/* <ModeToggle /> */}
             {children}{" "}
           </ActiveSectionContextProvider>
         </ThemeProvider>

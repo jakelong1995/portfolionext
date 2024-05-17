@@ -7,7 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/components/ui/active-section-context";
 import Image from "next/image";
-import logo from "@/public/Logo.svg";
+import logo from "@/public/logo.svg";
 import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
@@ -17,14 +17,14 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.nav
-        className="fixed p-1 top-6 left-1/2 border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed p-1 top-4 left-1/2 border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full dark:bg-gray-900 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
         <ul className="flex items-center justify-center text-[0.9rem] font-medium text-gray-500 gap-4">
-          <li>
+          <li className="h-12 aspect-square p-3">
             <Link href="#home">
-              <Image src={logo} alt="Logo" className="h-6" />
+              <Image src={logo} alt="Logo" />
             </Link>
           </li>
           {links.map((link) => (
