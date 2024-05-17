@@ -32,7 +32,7 @@ export default function Contact() {
           <Label htmlFor="message">Message</Label>
           <Textarea id="message" placeholder="Enter your message" rows={5} />
         </div>
-        <Button className="w-full" type="submit">
+        <Button className="w-full rounded-full h-12" type="submit">
           Submit
         </Button>
       </form>

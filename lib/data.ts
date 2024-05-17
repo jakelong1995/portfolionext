@@ -34,10 +34,10 @@ import sieuthimaypin from "@/public/sieuthimaypin.jpeg";
 import fefyfo from "@/public/Fefyfo.jpg";
 
 export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
+  // {
+  //   name: "Home",
+  //   hash: "#home",
+  // },
   {
     name: "Projects",
     hash: "#projects",

@@ -6,6 +6,9 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/components/ui/active-section-context";
+import Image from "next/image";
+import logo from "@/public/Logo.svg";
+import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -14,18 +17,18 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.nav
-        className="fixed p-1 top-0 left-1/2 border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed p-1 top-6 left-1/2 border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
         <ul className="flex items-center justify-center text-[0.9rem] font-medium text-gray-500 gap-4">
+          <li>
+            <Link href="#home">
+              <Image src={logo} alt="Logo" className="h-6" />
+            </Link>
+          </li>
           {links.map((link) => (
-            <motion.li
-              className="flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
+            <li className=" relative" key={link.hash}>
               <Link
                 className={clsx(
                   "flex items-center justify-center px-4 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
@@ -54,8 +57,11 @@ export default function Header() {
                   ></motion.span>
                 )}
               </Link>
-            </motion.li>
-          ))}
+            </li>
+          ))}{" "}
+          <li>
+            <ModeToggle />
+          </li>
         </ul>
       </motion.nav>
     </header>
