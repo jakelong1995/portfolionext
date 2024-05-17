@@ -24,7 +24,7 @@ export default function Contact() {
             <Input
               id="name"
               placeholder="Enter your name"
-              className="bg-gray-900"
+              className="dark:bg-gray-900"
             />
           </div>
           <div className="space-y-1.5">
@@ -33,7 +33,7 @@ export default function Contact() {
               id="email"
               placeholder="Enter your email"
               type="email"
-              className="bg-gray-900"
+              className="dark:bg-gray-900"
             />
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function Contact() {
             id="message"
             placeholder="Enter your message"
             rows={5}
-            className="bg-gray-900"
+            className="dark:bg-gray-900"
           />
         </div>
         <Button className="w-full rounded-full h-12" type="submit">
