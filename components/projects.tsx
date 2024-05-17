@@ -14,10 +14,12 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
 import { fadeInAnimationVariants } from "./animation";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
+  const { ref } = useSectionInView("Projects", 0.5);
   return (
-    <section id="projects" className="mb-28 max-w-6xl scroll-mt-28">
+    <section ref={ref} id="projects" className="mb-28 max-w-6xl scroll-mt-28">
       <div className="container grid gap-4 px-4 md:gap-8 md:px-6">
         <SectionHeading>Featured Projects</SectionHeading>
 

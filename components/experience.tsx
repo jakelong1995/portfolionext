@@ -6,10 +6,12 @@ import { experiencesData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInAnimationVariants } from "./animation";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Experience() {
+  const { ref } = useSectionInView("Experience", 0.5);
   return (
-    <section id="experience" className="mb-28 max-w-3xl scroll-mt-28">
+    <section ref={ref} id="experience" className="mb-28 max-w-3xl scroll-mt-28">
       <SectionHeading>my experience</SectionHeading>
       <ul className="space-y-8">
         {experiencesData.map((experience, index) => (

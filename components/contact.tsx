@@ -1,12 +1,17 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/section-heading";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Contact() {
+  const { ref } = useSectionInView("Contact", 0.5);
   return (
     <section
+      ref={ref}
       id="contact"
       className="mb-28 max-w-3xl scroll-mt-28 px-4 md:px-6 space-y-6"
     >

@@ -8,10 +8,15 @@ import { SiLinkedin, SiGithub } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   return (
     <section
+      ref={ref}
       id="home"
       className="scroll-mt-96 flex-col max-w-3xl flex gap-8  mb-28"
     >
@@ -63,7 +68,13 @@ export default function Intro() {
           asChild
           className="rounded-full h-12 transform transition-transform hover:scale-110"
         >
-          <Link href="#contact">
+          <Link
+            href="#contact"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          >
             Contact me <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
