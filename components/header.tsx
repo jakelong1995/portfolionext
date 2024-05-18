@@ -7,7 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Image from "next/image";
-import logo from "@/public/logo.svg";
+import logo from "@/public/Logo.svg";
 import { ModeToggle } from "./mode-toggle";
 
 export default function Header() {
