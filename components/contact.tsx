@@ -56,7 +56,7 @@ export default function Contact() {
         <SectionHeading>Get in touch</SectionHeading>
         <p className="mt-2 text-gray-500 dark:text-gray-400">
           Have a question or want to work together? Fill out the form below and
-          we'll get back to you as soon as possible.
+          we&apos;ll get back to you as soon as possible.
         </p>
       </div>
       <form
