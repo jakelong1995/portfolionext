@@ -119,22 +119,22 @@ export const projectsData = [
     link: "https://songphibrowsg.com/",
     imageUrl: songphi,
   },
-  {
-    title: "BFI Finance - Bike Collaterals",
-    description:
-      "PT BFI Finance Indonesia Tbk (BFI) was established in 1982 as PT Manufacturers Hanover Leasing Indonesia, a joint venture between Manufacturers Hanover Leasing Corporation from the United States and local partners.",
-    tags: ["UI-UX", "Web App"],
-    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNscdl-FVK5XP1kiQ?e=pZaGPK",
-    imageUrl: BFI,
-  },
-  {
-    title: "NRI Japan",
-    description:
-      "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
-    tags: ["UI-UX", "Web App"],
-    link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
-    imageUrl: NRI,
-  },
+  // {
+  //   title: "BFI Finance - Bike Collaterals",
+  //   description:
+  //     "PT BFI Finance Indonesia Tbk (BFI) was established in 1982 as PT Manufacturers Hanover Leasing Indonesia, a joint venture between Manufacturers Hanover Leasing Corporation from the United States and local partners.",
+  //   tags: ["UI-UX", "Web App"],
+  //   link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNscdl-FVK5XP1kiQ?e=pZaGPK",
+  //   imageUrl: BFI,
+  // },
+  // {
+  //   title: "NRI Japan",
+  //   description:
+  //     "Japanese client wants to develop an education platform that can manage student, classroom, check attendance, time table, connect teacher with students & parents",
+  //   tags: ["UI-UX", "Web App"],
+  //   link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
+  //   imageUrl: NRI,
+  // },
   {
     title: "Vuifest",
     description:
@@ -150,13 +150,13 @@ export const projectsData = [
     link: "https://pyxis.aura.network/",
     imageUrl: Pyxissafe,
   },
-  {
-    title: "Green Solutions",
-    description: "Green energy landing page.",
-    tags: ["UI Design", "Landing Page"],
-    link: "https://www.behance.net/gallery/192140411/Grid-Solutions",
-    imageUrl: greensolution,
-  },
+  // {
+  //   title: "Green Solutions",
+  //   description: "Green energy landing page.",
+  //   tags: ["UI Design", "Landing Page"],
+  //   link: "https://www.behance.net/gallery/192140411/Grid-Solutions",
+  //   imageUrl: greensolution,
+  // },
   {
     title: "Healthy",
     description: `Healthy is an app that help patient to book appoint with doctors in hospital and medical center around Ho Chi Minh City. Healthy helps patients avoid queue at hospitals and doctors prepare better for the patients.`,
