@@ -76,21 +76,28 @@ export default function Header() {
         <ModeToggle />
       </motion.div>
       {isMobileMenuOpen && (
-        <Card className="fixed w-full px-4 flex flex-col text-gray-500 left-0 rounded-none border-none z-10">
-          {links.map((link) => (
-            <Link
-              key={link.hash}
-              href={link.hash}
-              onClick={() => {
-                setActiveSection(link.name);
-                isMobileMenuOpen && setIsMobileMenuOpen(false);
-              }}
-              className="px-2 py-3 hover:text-gray-900 dark:hover:text-gray-200"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </Card>
+        <motion.div
+          className="fixed w-full text-gray-500 left-0"
+          initial={{ x: "-100vh" }}
+          animate={{ x: "0vh" }}
+          transition={{ type: "spring", stiffness: 380, damping: 40 }}
+        >
+          <Card className="px-4 flex flex-col rounded-none border-none z-10">
+            {links.map((link) => (
+              <Link
+                key={link.hash}
+                href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  isMobileMenuOpen && setIsMobileMenuOpen(false);
+                }}
+                className="px-2 py-3 hover:text-gray-900 dark:hover:text-gray-200"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </Card>
+        </motion.div>
       )}
     </header>
   );
