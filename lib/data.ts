@@ -135,21 +135,21 @@ export const projectsData = [
   //   link: "https://1drv.ms/b/s!Agi6lanJu3IHhqNq-Ga5e_AZ-tIVXQ?e=1miOdT",
   //   imageUrl: NRI,
   // },
-  {
-    title: "Vuifest",
-    description:
-      "Vuifest is an internal web project for a music festival in FPT",
-    tags: ["UI-UX", "Graphic", "Web App"],
-    link: "https://www.behance.net/gallery/163175735/Vuifest",
-    imageUrl: vuifest,
-  },
-  {
-    title: "Pyxis Safe",
-    description: "The Multi-Signature Safe of the Multichain",
-    tags: ["UI Design", "Graphic Design", "Landing Page"],
-    link: "https://pyxis.aura.network/",
-    imageUrl: Pyxissafe,
-  },
+  // {
+  //   title: "Vuifest",
+  //   description:
+  //     "Vuifest is an internal web project for a music festival in FPT",
+  //   tags: ["UI-UX", "Graphic", "Web App"],
+  //   link: "https://www.behance.net/gallery/163175735/Vuifest",
+  //   imageUrl: vuifest,
+  // },
+  // {
+  //   title: "Pyxis Safe",
+  //   description: "The Multi-Signature Safe of the Multichain",
+  //   tags: ["UI Design", "Graphic Design", "Landing Page"],
+  //   link: "https://pyxis.aura.network/",
+  //   imageUrl: Pyxissafe,
+  // },
   // {
   //   title: "Green Solutions",
   //   description: "Green energy landing page.",
