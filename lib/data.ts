@@ -140,7 +140,7 @@ export const projectsData = [
     title: "Vuifest",
     description:
       "Vuifest is an internal web project for a music festival in FPT",
-    tags: ["UI-UX", "Graphic", "Web App"],
+    tags: ["UI-UX", "Graphic", "Landing Page"],
     link: "https://www.behance.net/gallery/163175735/Vuifest",
     imageUrl: vuifest,
   },
