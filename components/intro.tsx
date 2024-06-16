@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { SiLinkedin, SiGithub } from "react-icons/si";
+import { SiLinkedin, SiGithub, SiFacebook, SiX } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
@@ -78,7 +78,16 @@ export default function Intro() {
             Contact me <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
-
+        <Button
+          size={"icon"}
+          variant={"secondary"}
+          asChild
+          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
+        >
+          <Link href="https://www.facebook.com/hoanglong2579" target="_blank">
+            <SiFacebook className="h-4 w-4" />
+          </Link>
+        </Button>
         <Button
           size={"icon"}
           variant={"secondary"}
@@ -92,7 +101,6 @@ export default function Intro() {
             <SiLinkedin className="h-4 w-4" />
           </Link>
         </Button>
-
         <Button
           size={"icon"}
           variant={"secondary"}
@@ -101,6 +109,16 @@ export default function Intro() {
         >
           <Link href="https://github.com/jakelong1995" target="_blank">
             <SiGithub className="h-4 w-4" />
+          </Link>
+        </Button>{" "}
+        <Button
+          size={"icon"}
+          variant={"secondary"}
+          asChild
+          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
+        >
+          <Link href="https://x.com/TranLon76355724" target="_blank">
+            <SiX className="h-4 w-4" />
           </Link>
         </Button>
       </motion.div>

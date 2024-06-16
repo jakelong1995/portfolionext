@@ -25,19 +25,17 @@ export default function Experience() {
             }}
             custom={index}
           >
-            <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
               <Image
                 alt={experience.title}
-                height={48}
                 src={experience.image}
                 style={{
                   aspectRatio: "1/1",
                   objectFit: "contain",
                 }}
-                width={48}
-                className="rounded-full shadow w-12 h-12"
+                className="rounded-md shadow w-16 h-16 bg-white"
               />
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2 items-center sm:items-start">
                 <h3 className="text-xl font-semibold">{experience.title}</h3>
                 <div className="flex space-x-2 text-gray-500 dark:text-gray-400">
                   <span>{experience.company}</span>
