@@ -8,12 +8,11 @@ import SectionHeading from "@/components/section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
-import { useToast } from "@/components/ui/use-toast";
 import { Send } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.5);
-  const { toast } = useToast();
 
   const handleSubmit = async (formData: FormData) => {
     const { data, error } = await sendEmail(formData);
@@ -60,11 +59,16 @@ export default function Contact() {
         </p>
       </div>
       <form
-        className="space-y-4"
-        onSubmit={async (e) => {
-          e.preventDefault();
-          const formData = new FormData(e.currentTarget);
-          await handleSubmit(formData);
+        className="mt-10 flex flex-col dark:text-black"
+        action={async (formData) => {
+          const { error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error(error);
+            return;
+          }
+
+          toast.success("Email sent successfully!");
         }}
       >
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
