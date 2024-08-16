@@ -9,29 +9,9 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import { Send } from "lucide-react";
-import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.5);
-
-  const handleSubmit = async (formData: FormData) => {
-    const { data, error } = await sendEmail(formData);
-
-    if (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: error,
-      });
-      return;
-    }
-
-    toast({
-      variant: "default",
-      title: "Success",
-      description: "Email sent successfully!",
-    });
-  };
 
   return (
     <motion.section
@@ -58,19 +38,7 @@ export default function Contact() {
           we&apos;ll get back to you as soon as possible.
         </p>
       </div>
-      <form
-        className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { error } = await sendEmail(formData);
-
-          if (error) {
-            toast.error(error);
-            return;
-          }
-
-          toast.success("Email sent successfully!");
-        }}
-      >
+      <form className="mt-10 flex flex-col dark:text-black" action={sendEmail}>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label htmlFor="name">Name</Label>
