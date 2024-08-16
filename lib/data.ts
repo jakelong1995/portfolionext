@@ -93,6 +93,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "UPLend",
+    description: "Cryptocurrency - BTC Lending Platform",
+    tags: ["Landing Page", "React", "Nextjs"],
+    link: "https://www.uplend.xyz",
+    imageUrl: uplend,
+  },
+  {
     title: "Fefyfo - Your Imagination - Your Story",
     description: "A library of custom story create by your imagination.",
     tags: [
@@ -151,13 +158,6 @@ export const projectsData = [
     tags: ["UI Design", "Graphic Design", "Landing Page"],
     link: "https://pyxis.aura.network/",
     imageUrl: Pyxissafe,
-  },
-  {
-    title: "UPLend",
-    description: "Cryptocurrency - BTC Lending Platform",
-    tags: ["Landing Page", "React", "Nextjs"],
-    link: "https://www.uplend.xyz",
-    imageUrl: uplend,
   },
   {
     title: "Healthy",
