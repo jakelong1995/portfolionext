@@ -38,7 +38,10 @@ export default function Contact() {
           we&apos;ll get back to you as soon as possible.
         </p>
       </div>
-      <form className="mt-10 flex flex-col dark:text-black" action={sendEmail}>
+      <form
+        className="mt-10 flex flex-col gap-4 dark:text-black"
+        action={sendEmail}
+      >
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label htmlFor="name">Name</Label>
