@@ -18,7 +18,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="scroll-mt-96 flex-col max-w-3xl flex gap-8  mb-28"
+      className="scroll-mt-96 flex-col max-w-screen-lg flex gap-8  mb-28"
     >
       <div className="flex flex-col md:flex-row items-center h-fit px-4 py-8 justify-between mx-auto sm:gap-8">
         <motion.div
@@ -38,7 +38,7 @@ export default function Intro() {
         </motion.div>
 
         <motion.div
-          className="w-full flex-col flex gap-4 text-center md:text-left max-w-md !leading-[1.5]"
+          className="w-full flex-col flex gap-4 text-center md:text-left max-w-lg !leading-[1.5]"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -48,11 +48,16 @@ export default function Intro() {
 
           <p className="text-xl !leading-[1.5] ">
             <span className="font-semibold">
-              UX Designer & full-stack developer
+              Full-stack developer & UX Developer
             </span>{" "}
             with <span className="font-semibold">4 years</span> of experience. I
-            enjoy building{" "}
-            <span className="italic">usable & aesthetic websites</span>
+            specialize in creating both functional and visually appealing
+            websites.
+            <br />
+            I'm currently available for{" "}
+            <span className="italic font-semibold">
+              freelance opportunities.
+            </span>
           </p>
         </motion.div>
       </div>

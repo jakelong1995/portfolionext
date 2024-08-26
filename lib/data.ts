@@ -13,9 +13,9 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
-  SiFirebase,
   SiExpress,
   SiPostman,
+  SiNodedotjs,
 } from "react-icons/si";
 
 import fpt from "@/public/fpt.webp";
@@ -208,10 +208,10 @@ export const skillsData = [
     title: "Github",
     image: React.createElement(SiGithub),
   },
-  // {
-  //   title: "Firebase",
-  //   image: React.createElement(SiFirebase),
-  // },
+  {
+    title: "Node.js",
+    image: React.createElement(SiNodedotjs),
+  },
   {
     title: "Express",
     image: React.createElement(SiExpress),
