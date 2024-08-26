@@ -55,9 +55,7 @@ export default function Intro() {
             websites.
             <br />
             I`&apos;m currently available for{" "}
-            <span className="italic font-semibold">
-              freelance opportunities.
-            </span>
+            <span className="font-semibold">freelance opportunities.</span>
           </p>
         </motion.div>
       </div>
