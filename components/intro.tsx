@@ -54,7 +54,7 @@ export default function Intro() {
             specialize in creating both functional and visually appealing
             websites.
             <br />
-            I'm currently available for{" "}
+            I`&apos;m currently available for{" "}
             <span className="italic font-semibold">
               freelance opportunities.
             </span>
