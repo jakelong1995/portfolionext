@@ -61,7 +61,7 @@ export const links = [
 export const experiencesData = [
   {
     company: "FPT Software",
-    title: "UX Designer",
+    title: "Frontend Developer & UX Designer",
     image: fpt,
     date: "Jan 2021 - Now",
   },
