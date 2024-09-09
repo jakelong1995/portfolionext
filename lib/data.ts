@@ -26,7 +26,6 @@ import Go2Joy from "@/public/Go2Joy.png";
 import telos from "@/public/telos.webp";
 import healthy from "@/public/Healthy-casestudy.png";
 import vuifest from "@/public/vuifest.png";
-import greensolution from "@/public/greensolution.png";
 import NRI from "@/public/NRIJapan.png";
 import BFI from "@/public/BFI Finance.png";
 import Pyxissafe from "@/public/PyxisSafe.png";
