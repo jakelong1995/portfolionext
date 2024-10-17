@@ -48,13 +48,13 @@ export default function Intro() {
 
           <p className="text-xl !leading-[1.5] ">
             <span className="font-semibold">
-              Full-stack developer & UX Developer
+              Full-stack developer & UX Designer
             </span>{" "}
             with <span className="font-semibold">4 years</span> of experience. I
             specialize in creating both functional and visually appealing
             websites.
             <br />
-            I`&apos;m currently available for{" "}
+            I&apos;m currently available for{" "}
             <span className="font-semibold">freelance opportunities.</span>
           </p>
         </motion.div>
