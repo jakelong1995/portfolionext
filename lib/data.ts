@@ -112,14 +112,14 @@ export const projectsData = [
     link: "https://fefyfo.com/",
     imageUrl: fefyfo,
   },
-  {
-    title: "Gia Phúc Ân - Siêu Thị Máy Pin",
-    description:
-      "Trải qua hơn 23 năm hình thành và phát triển, Gia Phúc Ân đã vươn lên trở thành đơn vị dẫn đầu trong ngành sản xuất và kinh doanh vật liệu hàn.",
-    tags: ["UI-UX", "Development", "E-com"],
-    link: "https://sieuthimaypin.com/",
-    imageUrl: sieuthimaypin,
-  },
+  // {
+  //   title: "Gia Phúc Ân - Siêu Thị Máy Pin",
+  //   description:
+  //     "Trải qua hơn 23 năm hình thành và phát triển, Gia Phúc Ân đã vươn lên trở thành đơn vị dẫn đầu trong ngành sản xuất và kinh doanh vật liệu hàn.",
+  //   tags: ["UI-UX", "Development", "E-com"],
+  //   link: "https://sieuthimaypin.com/",
+  //   imageUrl: sieuthimaypin,
+  // },
   {
     title: "Songphi Brows",
     description:
