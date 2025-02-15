@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { sendEmail } from "@/actions/sendEmail";
 import { Send } from "lucide-react";
 
 export default function Contact() {
@@ -38,10 +37,7 @@ export default function Contact() {
           we&apos;ll get back to you as soon as possible.
         </p>
       </div>
-      <form
-        className="mt-10 flex flex-col gap-4 dark:text-black"
-        action={sendEmail}
-      >
+      <form className="mt-10 flex flex-col gap-4 dark:text-black">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <Label htmlFor="name">Name</Label>
