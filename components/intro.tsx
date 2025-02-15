@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { SiLinkedin, SiGithub, SiFacebook, SiX } from "react-icons/si";
 import profile from "@/public/profile.png";
