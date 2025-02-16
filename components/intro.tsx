@@ -7,7 +7,7 @@ import Link from "next/link";
 import { SiLinkedin, SiGithub, SiFacebook, SiX } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -18,113 +18,70 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="scroll-mt-96 flex-col max-w-screen-lg flex gap-8  mb-28"
+      className="h-[100vh] flex max-w-screen-lg flex-col items-center text-center pt-28 overflow-hidden w-full"
     >
-      <div className="flex flex-col md:flex-row items-center h-fit px-4 py-8 justify-between mx-auto sm:gap-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: "tween",
-            duration: 0.2,
-          }}
-        >
+      <div className="flex flex-col justify-center items-center">
+        <div className="flex items-center ml-6">
+          <div className="rounded-full text-gray-900 px-6 py-2 text-xl font-medium border-2 border-gray-900">
+            Hello!
+          </div>
           <Image
-            src={profile}
-            alt="profilepic"
-            priority={true}
-            className="rounded-full object-cover w-48 h-fit border-[0.3rem] border-white dark:border-slate-700 shadow-lg"
+            src="/vector1.svg"
+            alt="vector"
+            width={40}
+            height={40}
+            className="mb-14 w-8 h-8 -ml-2"
           />
-        </motion.div>
-
-        <motion.div
-          className="w-full flex-col flex gap-4 text-center md:text-left max-w-lg !leading-[1.5]"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          <h1 className="text-3xl pt-6 sm:pt-0">
-            Hi I&apos;m <span className="font-semibold">Hoang Long!</span>
-          </h1>
-
-          <p className="text-xl !leading-[1.5] ">
-            <span className="font-semibold">
-              Full-stack developer & UX Designer
-            </span>{" "}
-            with <span className="font-semibold">4 years</span> of experience. I
-            specialize in creating both functional and visually appealing
-            websites.
-            <br />
-            I&apos;m currently available for{" "}
-            <span className="font-semibold">freelance opportunities.</span>
-          </p>
-        </motion.div>
+        </div>
+        <div className="relative">
+          <h1 className="text-7xl font-semibold leading-none">
+            I&apos;m <span className="text-primary">Long</span> <br />
+            Software Engineer
+          </h1>{" "}
+          <Image
+            src="/vector2.svg"
+            alt="vector"
+            width={40}
+            height={40}
+            className="w-16 h-16 absolute -left-5 -translate-x-1/2 -bottom-10"
+          />
+        </div>
       </div>
-      <motion.div
-        className="flex flex-wrap items-center justify-center gap-4 px-4 text-lg"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
-      >
-        <Button
-          asChild
-          className="rounded-full h-12 transform transition-transform hover:scale-110"
-        >
-          <Link
-            href="#contact"
-            onClick={() => {
-              setActiveSection("Contact");
-              setTimeOfLastClick(Date.now());
-            }}
-          >
-            Contact me <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
-        <Button
-          size={"icon"}
-          variant={"secondary"}
-          asChild
-          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
-        >
-          <Link href="https://www.facebook.com/hoanglong2579" target="_blank">
-            <SiFacebook className="h-4 w-4" />
-          </Link>
-        </Button>
-        <Button
-          size={"icon"}
-          variant={"secondary"}
-          asChild
-          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
-        >
-          <Link
-            href="https://www.linkedin.com/in/jakelong1995/"
-            target="_blank"
-          >
-            <SiLinkedin className="h-4 w-4" />
-          </Link>
-        </Button>
-        <Button
-          size={"icon"}
-          variant={"secondary"}
-          asChild
-          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
-        >
-          <Link href="https://github.com/jakelong1995" target="_blank">
-            <SiGithub className="h-4 w-4" />
-          </Link>
-        </Button>{" "}
-        <Button
-          size={"icon"}
-          variant={"secondary"}
-          asChild
-          className="rounded-full bg-white dark:bg-slate-700 h-12 w-12 transform transition-transform hover:scale-110"
-        >
-          <Link href="https://x.com/TranLon76355724" target="_blank">
-            <SiX className="h-4 w-4" />
-          </Link>
-        </Button>
-      </motion.div>
+      <Image
+        src={profile}
+        alt="Profile"
+        height={800}
+        width={800}
+        priority={true}
+        className="h-full w-auto z-10"
+      />
+      <Image
+        src="/ellipse.svg"
+        alt="ellipse"
+        width={600}
+        height={600}
+        className="absolute bottom-0"
+      />
+      <Button className="absolute bottom-8 z-20 rounded-full text-xl font-medium h-12 px-6">
+        Hire me
+        <ArrowUpRight className="w-8 h-8 ml-1" />
+      </Button>
+      <div className="absolute left-16 bottom-1/3 z-20 flex flex-col gap-3 max-w-xs text-left">
+        <Image
+          src="/quote-up.svg"
+          alt="quote-up"
+          width={40}
+          height={40}
+          className="w-8 h-8"
+        />
+        <p className="text-xl font-medium leading-tight">
+          The only way to do great work is to love what you do
+        </p>
+      </div>
+      <p className="absolute right-16 bottom-1/3 z-20 text-xl text-right">
+        <span className="text-5xl font-semibold">3 years</span>
+        <br /> of experience
+      </p>
     </section>
   );
 }

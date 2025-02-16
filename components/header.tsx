@@ -7,7 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Image from "next/image";
-import logo from "@/public/Logo.svg";
+import logo from "@/public/logo.svg";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
@@ -33,7 +33,7 @@ export default function Header() {
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>{" "}
-          <Link href="#home" className="h-12 aspect-square p-3">
+          <Link href="#home" className="h-14 aspect-square p-3 ml-1">
             <Image src={logo} alt="Logo" />
           </Link>
         </div>{" "}
