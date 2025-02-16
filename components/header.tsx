@@ -18,9 +18,9 @@ export default function Header() {
     useActiveSectionContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="z-20 fixed top-0 sm:top-4 left-1/2 mx-auto w-full">
+    <header className="z-50 fixed top-0 sm:top-4 left-1/2 mx-auto w-full">
       <motion.div
-        className="flex bg-gray-900 sm:w-fit rounded-none sm:rounded-full items-center justify-between sm:justify-center gap-6 p-2 text-white text-xl"
+        className="flex bg-gray-900 sm:w-fit rounded-none sm:rounded-full items-center justify-between sm:justify-center gap-6 p-2 text-white text-lg"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
@@ -86,7 +86,7 @@ export default function Header() {
                   setActiveSection(link.name);
                   isMobileMenuOpen && setIsMobileMenuOpen(false);
                 }}
-                className="px-2 py-3 hover:text-gray-900 dark:hover:text-gray-200"
+                className="px-1 py-3 hover:text-gray-900 dark:hover:text-gray-200"
               >
                 {link.name}
               </Link>

@@ -18,7 +18,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="h-[100vh] flex max-w-screen-lg flex-col items-center text-center pt-28 overflow-hidden w-full"
+      className="h-[100vh] flex max-w-screen-lg flex-col items-center text-center pt-28 overflow-hidden w-full relative"
     >
       <div className="flex flex-col justify-center items-center">
         <div className="flex items-center ml-6">
@@ -55,18 +55,12 @@ export default function Intro() {
         priority={true}
         className="h-full w-auto z-10"
       />
-      <Image
-        src="/ellipse.svg"
-        alt="ellipse"
-        width={600}
-        height={600}
-        className="absolute bottom-0"
-      />
+      <div className="absolute -bottom-[300px] bg-primary/70 w-[600px] h-[600px] rounded-full"></div>
       <Button className="absolute bottom-8 z-20 rounded-full text-xl font-medium h-12 px-6">
         Hire me
         <ArrowUpRight className="w-8 h-8 ml-1" />
       </Button>
-      <div className="absolute left-16 bottom-1/3 z-20 flex flex-col gap-3 max-w-xs text-left">
+      <div className="absolute left-1 bottom-1/3 z-20 flex flex-col gap-3 max-w-xs text-left">
         <Image
           src="/quote-up.svg"
           alt="quote-up"
@@ -78,7 +72,7 @@ export default function Intro() {
           The only way to do great work is to love what you do
         </p>
       </div>
-      <p className="absolute right-16 bottom-1/3 z-20 text-xl text-right">
+      <p className="absolute right-1 bottom-1/3 z-20 text-xl text-right">
         <span className="text-5xl font-semibold">3 years</span>
         <br /> of experience
       </p>
