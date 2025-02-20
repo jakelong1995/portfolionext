@@ -6,6 +6,7 @@ import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
 import Board from "@/components/board";
+import Blog from "@/components/blog";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Skills />
       <Experience />
       <Board />
+      <Blog />
       <Contact />
       <Footer />
     </main>
