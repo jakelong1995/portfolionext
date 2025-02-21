@@ -4,6 +4,8 @@ import Footer from "@/components/footer";
 import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
+import Board from "@/components/board";
+import Blog from "@/components/blog";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <Projects />
       <Skills />
       <Experience />
+      <Board />
+      <Blog />
       <Contact />
       <Footer />
     </main>
