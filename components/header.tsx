@@ -10,13 +10,18 @@ import Image from "next/image";
 import logo from "@/public/logo.svg";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
-import { Menu, X } from "lucide-react";
-import { Card } from "./ui/card";
+import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="z-50 fixed top-0 sm:top-4 left-1/2 mx-auto w-full">
       <motion.div
@@ -24,19 +29,40 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <div className="flex gap-1">
-          <Button
-            size={"icon"}
-            variant={"ghost"}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="sm:hidden h-12 w-12 rounded-full"
-          >
-            {isMobileMenuOpen ? <X /> : <Menu />}
-          </Button>{" "}
+        <div className="flex gap-1 items-center">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                size={"icon"}
+                variant={"ghost"}
+                className="sm:hidden h-12 w-12 rounded-full"
+              >
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-full p-8 text-center">
+              <SheetTitle>Menu</SheetTitle>
+              <nav className="flex flex-col gap-2 p-6 justify-center items-center h-full">
+                {links.map((link) => (
+                  <Link
+                    key={link.hash}
+                    href={link.hash}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setIsOpen(false);
+                    }}
+                    className="px-1 py-3 hover:text-gray-900 dark:hover:text-gray-200 transition-colors w-full justify-center text-xl"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
           <Link href="#home" className="h-14 aspect-square p-3 ml-1">
             <Image src={logo} alt="Logo" />
           </Link>
-        </div>{" "}
+        </div>
         <nav className="hidden sm:flex items-center justify-center gap-6">
           {links.map((link) => (
             <div className="relative" key={link.hash}>
@@ -66,34 +92,9 @@ export default function Header() {
                 )}
               </Link>
             </div>
-          ))}{" "}
-        </nav>{" "}
-        {/* <ModeToggle /> */}
+          ))}
+        </nav>
       </motion.div>
-      {isMobileMenuOpen && (
-        <motion.div
-          className="fixed w-full text-gray-500 left-0"
-          initial={{ x: "-100vh" }}
-          animate={{ x: "0vh" }}
-          transition={{ type: "spring", stiffness: 380, damping: 40 }}
-        >
-          <Card className="px-4 flex flex-col rounded-none border-none z-10">
-            {links.map((link) => (
-              <Link
-                key={link.hash}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  isMobileMenuOpen && setIsMobileMenuOpen(false);
-                }}
-                className="px-1 py-3 hover:text-gray-900 dark:hover:text-gray-200"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </Card>
-        </motion.div>
-      )}
     </header>
   );
 }

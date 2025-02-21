@@ -1,13 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import { motion } from "motion/react";
-import Link from "next/link";
-import { SiLinkedin, SiGithub, SiFacebook, SiX } from "react-icons/si";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
