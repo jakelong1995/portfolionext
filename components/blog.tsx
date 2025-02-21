@@ -45,7 +45,7 @@ export default function Component() {
         {blogItems.map((item) => (
           <div
             key={item.id}
-            className="blog-item flex flex-col bg-white rounded-3xl gap-8"
+            className="blog-item flex flex-col bg-white rounded-3xl gap-6 group"
           >
             <div className="relative w-full h-72">
               <Image
@@ -60,7 +60,7 @@ export default function Component() {
                 className="absolute -bottom-4 -right-4 z-10 bg-white p-4 transition-all duration-300 rounded-br-none
                rounded-full"
               >
-                <div className="bg-gray-800 rounded-full p-4">
+                <div className="bg-gray-800 rounded-full p-4 group-hover:bg-primary transition-all duration-300">
                   <ArrowUpRight className="w-10 h-10 text-white" />
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Component() {
                 {item.date}
               </p>
             </div>
-            <p className="text-gray-700 text-3xl leading-normal">
+            <p className="text-gray-700 text-3xl leading-snug">
               {item.description}
             </p>
           </div>
