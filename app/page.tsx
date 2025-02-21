@@ -1,20 +1,20 @@
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 import Footer from "@/components/footer";
-import Intro from "@/components/intro";
+import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
-import Board from "@/components/board";
+import Banner from "@/components/banner";
 import Blog from "@/components/blog";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <Intro />
+      <Hero />
       <Projects />
       <Skills />
       <Experience />
-      <Board />
+      <Banner />
       <Blog />
       <Contact />
       <Footer />

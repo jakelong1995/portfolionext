@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-
+import { Button } from "./ui/button";
+import { ArrowUpRight } from "lucide-react";
 export default function Component() {
   const blogItems = [
     {
@@ -31,89 +32,55 @@ export default function Component() {
   ];
 
   return (
-    <section className="blog-section w-full h-auto py-12">
-      <div className="option">
-        <div className="w-full h-36 justify-between items-center inline-flex">
-          <div className="w-1/4 h-auto text-[#344053] text-5xl font-bold">
-            From my blog post
-          </div>
-          <button
-            className="px-10 py-5 bg-[#fd8439] rounded-[60px] justify-center items-center gap-2.5 flex 
-            hover:bg-[#e67732] transition-colors duration-100 cursor-pointer"
-            onClick={() => {
-              // Add your click handler here
-            }}
-          >
-            <span className="text-white text-xl font-bold">See All</span>
-          </button>
+    <section className="blog-section max-w-screen-xl h-auto py-12 px-4">
+      <div className="w-full justify-between items-center inline-flex">
+        <div className="text-gray-700 text-5xl font-bold">
+          From my blog post
         </div>
+        <Button className="px-10 h-16 bg-primary rounded-full text-white text-xl font-bold">
+          See All
+        </Button>
       </div>
-      <div className="list grid grid-cols-3 gap-6 mt-8">
+      <div className="list grid grid-cols-3 gap-6 mt-12">
         {blogItems.map((item) => (
-          <div key={item.id} className="blog-item bg-white rounded-3xl p-6">
-            <div className="relative w-full h-72 mb-4">
+          <div
+            key={item.id}
+            className="blog-item flex flex-col bg-white rounded-3xl gap-8"
+          >
+            <div className="relative w-full h-72">
               <Image
                 src={item.imageUrl}
                 alt={item.title}
                 quality={100}
-                className="object-cover rounded-xl w-full h-full"
+                className="object-cover rounded-3xl w-full h-full"
                 width={540}
                 height={540}
               />
               <div
-                data-svg-wrapper
-                className="absolute bottom-[-7px] right-[-5px] z-10 bg-white p-2 transition-all duration-300 hover:scale-110 hover:mb-1"
-                style={{
-                  borderRadius: "30px 0 30px 0",
-                }}
+                className="absolute -bottom-4 -right-4 z-10 bg-white p-4 transition-all duration-300 rounded-br-none
+               rounded-full"
               >
-                <svg
-                  width={60}
-                  height={60}
-                  viewBox="0 0 115 115"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    x="0.5"
-                    y="114.081"
-                    width={114}
-                    height={114}
-                    rx={57}
-                    transform="rotate(-90 0.5 114.081)"
-                    fill="#1D2939"
-                  />
-                  <path
-                    d="M42.5 72.0811L72.5 42.0811"
-                    stroke="white"
-                    strokeWidth={4}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M42.5 42.0811H72.5V72.0811"
-                    stroke="white"
-                    strokeWidth={4}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <div className="bg-gray-800 rounded-full p-4">
+                  <ArrowUpRight className="w-10 h-10 text-white" />
+                </div>
               </div>
             </div>
-            <div className="h-14 px-8 py-4 mb-4 bg-gray-100 hover:bg-gray-300 rounded-3xl justify-center items-center gap-2.5 inline-flex overflow-hidden transition-colors duration-300">
+            <div className="px-8 py-4 bg-gray-100 rounded-full w-fit">
               <div className="text-black text-xl">App Design</div>
             </div>
-            <div className="flex mb-2 gap-2">
-              <p className="text-gray-500 text-xl flex items-center">
-                <span className="w-2 h-2 bg-[#fd8439] rounded-full mr-2"></span>
+            <div className="flex gap-2">
+              <p className="text-gray-700 text-xl flex items-center">
+                <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
                 {item.author}
               </p>
-              <p className="text-gray-500 text-xl flex items-center ml-4">
-                <span className="w-2 h-2 bg-[#fd8439] rounded-full mr-2"></span>
+              <p className="text-gray-700 text-xl flex items-center ml-4">
+                <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
                 {item.date}
               </p>
             </div>
-            <p className="text-gray-700 text-3xl">{item.description}</p>
+            <p className="text-gray-700 text-3xl leading-normal">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>

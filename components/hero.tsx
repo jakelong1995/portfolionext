@@ -6,13 +6,13 @@ import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { useSectionInView } from "@/lib/hooks";
 
-export default function Intro() {
+export default function Hero() {
   const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
       ref={ref}
       id="home"
-      className="h-[100vh] flex max-w-screen-xl flex-col items-center text-center pt-28 overflow-hidden w-full gap-8 relative"
+      className="h-[100vh] flex max-w-screen-xl flex-col items-center text-center pt-28 overflow-hidden w-full gap-0 relative"
     >
       <div className="flex flex-col justify-center items-center z-30">
         <div className="flex items-center ml-6">
@@ -44,10 +44,10 @@ export default function Intro() {
       <Image
         src={profile}
         alt="Profile"
-        height={800}
-        width={800}
+        height={1000}
+        width={1000}
         priority={true}
-        className="z-10 h-full w-auto object-bottom object-contain max-w-[800px]"
+        className="z-10 h-full w-auto object-bottom object-contain max-w-[1000px]"
         quality={100}
       />
       <Image
@@ -55,13 +55,13 @@ export default function Intro() {
         alt="ellipse"
         width={1000}
         height={1000}
-        className="absolute bottom-0 max-w-[1000px] mx-auto"
+        className="absolute bottom-0 w-3/5"
       />
       <Button className="absolute bottom-8 z-20 rounded-full text-xl font-medium h-12 px-6">
         Hire me
         <ArrowUpRight className="w-8 h-8 ml-1" />
       </Button>
-      <div className="absolute left-4 bottom-1/2 z-30 flex-col gap-2 text-left max-w-32 md:max-w-64 hidden sm:flex">
+      <div className="absolute left-4 bottom-1/3 z-30 flex-col gap-2 text-left max-w-32 md:max-w-64 hidden sm:flex">
         <Image
           src="/quote-up.svg"
           alt="quote-up"
@@ -73,7 +73,7 @@ export default function Intro() {
           The only way to do great work is to love what you do
         </p>
       </div>
-      <p className="absolute right-4 bottom-1/2 z-30 text-xl text-right hidden sm:block">
+      <p className="absolute right-4 bottom-1/3 z-30 text-xl text-right hidden sm:block">
         <span className="text-3xl lg:text-5xl font-semibold">3 years</span>
         <br /> of experience
       </p>
