@@ -22,19 +22,19 @@ export default function Header() {
     useActiveSectionContext();
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="z-50 fixed top-0 sm:top-4 left-1/2 mx-auto w-full">
+    <header className="z-50 fixed top-0 md:top-4 left-1/2 mx-auto w-full">
       <motion.div
-        className="flex bg-gray-900 sm:w-fit rounded-none sm:rounded-full items-center justify-between sm:justify-center gap-6 p-2 text-white text-lg"
+        className="flex bg-gray-900 md:w-fit rounded-none md:rounded-full items-center justify-between md:justify-center gap-6 p-2 text-white text-lg"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       >
-        <div className="flex gap-1 items-center">
+        <div className="flex gap-1 items-center w-full">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
                 size={"icon"}
                 variant={"ghost"}
-                className="sm:hidden h-12 w-12 rounded-full"
+                className="md:hidden h-12 w-12 rounded-full"
               >
                 <Menu />
               </Button>
@@ -59,10 +59,10 @@ export default function Header() {
             </SheetContent>
           </Sheet>
           <Link href="#home" className="h-14 aspect-square p-3 ml-1">
-            <Image src="/longlogo.svg" alt="Logo" />
+            <Image src="/logo.svg" alt="Logo" width={100} height={100} />
           </Link>
         </div>
-        <nav className="hidden sm:flex items-center justify-center gap-6">
+        <nav className="hidden md:flex items-center justify-center gap-6">
           {links.map((link) => (
             <div className="relative" key={link.hash}>
               <Link
