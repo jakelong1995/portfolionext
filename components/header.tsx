@@ -7,7 +7,6 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import Image from "next/image";
-import logo from "@/public/logo.svg";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
@@ -60,7 +59,7 @@ export default function Header() {
             </SheetContent>
           </Sheet>
           <Link href="#home" className="h-14 aspect-square p-3 ml-1">
-            <Image src={logo} alt="Logo" />
+            <Image src="/longlogo.svg" alt="Logo" />
           </Link>
         </div>
         <nav className="hidden sm:flex items-center justify-center gap-6">
