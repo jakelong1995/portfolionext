@@ -19,9 +19,15 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
   return (
-    <section ref={ref} id="projects" className="mb-28 max-w-6xl scroll-mt-28">
-      <div className="container grid gap-4 px-4 md:gap-8 md:px-6">
-        <SectionHeading>Featured Projects</SectionHeading>
+    <section
+      ref={ref}
+      id="projects"
+      className="mb-20 max-w-screen-xl scroll-mt-28"
+    >
+      <div className="container grid px-4 md:px-6">
+        <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium mb-10 sm:mb-16 text-center">
+          <span className="text-zinc-900">My </span> Portfolio
+        </div>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 h-auto">
           {projectsData.map((project, index) => (

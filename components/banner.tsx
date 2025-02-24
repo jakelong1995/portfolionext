@@ -19,7 +19,7 @@ export default function Banner() {
   );
 
   return (
-    <div className="relative w-full h-[148px] bg-orange-500 overflow-hidden mx-4">
+    <div className="relative w-full h-[148px] bg-orange-500 overflow-hidden mx-4 rounded-3xl">
       <div
         className="absolute w-full h-[72px] left-42 top-8 inset-0 bg-white"
         style={{ transform: "rotate(-3deg) scale(1.1)" }}

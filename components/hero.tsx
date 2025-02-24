@@ -16,7 +16,7 @@ export default function Hero() {
     >
       <div className="flex flex-col justify-center items-center z-30">
         <div className="flex items-center ml-6">
-          <div className="rounded-full text-gray-900 px-6 py-2 text-xl font-medium border-2 border-gray-900">
+          <div className="rounded-full text-zinc-900 px-6 py-2 text-xl font-medium border-2 border-zinc-900">
             Hello!
           </div>
           <Image

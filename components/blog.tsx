@@ -56,11 +56,8 @@ export default function Component() {
                 width={540}
                 height={540}
               />
-              <div
-                className="absolute -bottom-4 -right-4 z-10 bg-white p-4 transition-all duration-300 rounded-br-none
-               rounded-full"
-              >
-                <div className="bg-gray-800 rounded-full p-4 group-hover:bg-primary transition-all duration-300">
+              <div className="absolute -bottom-4 -right-4 z-10 bg-white p-4 transition-all duration-300 rounded-br-none rounded-full">
+                <div className="bg-gray-800 rounded-full p-3 group-hover:bg-primary transition-all duration-300">
                   <ArrowUpRight className="w-10 h-10 text-white" />
                 </div>
               </div>
