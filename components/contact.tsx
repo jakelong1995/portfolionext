@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "motion/react";
-import { Send } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact", 0.5);
@@ -26,56 +26,52 @@ export default function Contact() {
       viewport={{
         once: true,
       }}
+      className="text-white py-16"
     >
       <div
         id="contact"
-        className="mb-28 max-w-3xl scroll-mt-28 px-4 md:px-6 space-y-6"
+        className="mb-28 max-w-3xl mx-auto scroll-mt-28 px-4 md:px-6 space-y-6"
       >
         <div className="text-center">
-          <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
-            <span className="text-zinc-900">Get in </span> touch
-          </div>
-          <p className="mt-2 text-gray-500 dark:text-gray-400">
-            Have a question or want to work together? Fill out the form below
-            and we&apos;ll get back to you as soon as possible.
-          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
+            <span className="text-zinc-400">Have an Project Idea? </span>
+            <span className="text-primary">Let's Discuss</span>
+          </h2>
         </div>
-        <form className="mt-10 flex flex-col gap-4 dark:text-black">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                className="dark:bg-gray-900"
-              />
+        <form className="mt-10 flex flex-col gap-8">
+          <div className="relative">
+            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+              <Mail className="h-5 w-5 text-primary" />
             </div>
-            <div className="space-y-1.5">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                type="email"
-                className="dark:bg-gray-900"
-              />
-            </div>
-          </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="message">Message</Label>
-            <Textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              rows={5}
-              className="dark:bg-gray-900"
+            <Input
+              id="name"
+              name="name"
+              placeholder="Your name"
+              className="border rounded-full pl-12 py-6 text-white focus:ring-primary focus:border-primary"
             />
           </div>
-          <Button className="w-full rounded-full h-12" type="submit">
-            Submit
-            <Send className="ml-2 h-4 w-4" />
+
+          <div className="relative">
+            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+              <Mail className="h-5 w-5 text-primary" />
+            </div>
+            <Input
+              id="email"
+              name="email"
+              placeholder="Your email"
+              type="email"
+              className=" border rounded-full pl-12 py-6 text-white focus:ring-primary focus:border-primary"
+            />
+          </div>
+
+          <Button
+            className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6"
+            type="submit"
+          >
+            Send
           </Button>
+
+          <div className="text-center text-gray-500 mt-4">or</div>
         </form>
       </div>
     </motion.section>

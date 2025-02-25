@@ -8,33 +8,49 @@ import { useSectionInView } from "@/lib/hooks";
 
 export default function TechStacks() {
   const { ref } = useSectionInView("Skills", 0.5);
+
+  // Duplicate the skills data to create a seamless loop
+  const duplicatedSkills = [...skillsData, ...skillsData];
+
   return (
     <section
       ref={ref}
       id="skills"
-      className="mb-28 max-w-3xl scroll-mt-28 text-center"
+      className="mb-28 scroll-mt-28 text-center w-full"
     >
-      <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
-        Tech<span className="text-zinc-900"> Stacks </span>
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
+          Tech<span className="text-zinc-900"> Stacks </span>
+        </div>
       </div>
-      <ul className="flex flex-wrap justify-center gap-3 text-lg ">
-        {skillsData.map((skill, index) => (
-          <motion.li
-            key={index}
-            className=" w-24 h-24 flex flex-col gap-2 justify-center items-center p-2"
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            <div className="text-[40px]">{skill.image}</div>
-            <div className="text-sm">{skill.title}</div>
-          </motion.li>
-        ))}
-      </ul>
+
+      <div className="w-full overflow-hidden">
+        <motion.div
+          className="flex gap-4"
+          animate={{
+            x: [0, -50 * skillsData.length],
+          }}
+          transition={{
+            x: {
+              duration: 15,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+          }}
+        >
+          {duplicatedSkills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="w-24 h-24 flex-shrink-0 flex flex-col gap-2 justify-center items-center p-2"
+              whileHover={{ scale: 1.1 }}
+            >
+              <div className="text-[40px]">{skill.image}</div>
+              <div className="text-sm">{skill.title}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

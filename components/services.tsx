@@ -38,11 +38,11 @@ export default function Services() {
           {SERVICES.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-[#686868]/20 backdrop-blur-lg rounded-3xl border-2 border-white/20 hover:bg-primary transition-all duration-300 flex flex-col overflow-hidden cursor-pointer pt-1 sm:pt-2"
+              className="bg-[#686868]/20 backdrop-blur-lg rounded-3xl border-2 border-white/20 hover:bg-primary transition-all duration-300 flex flex-col overflow-hidden cursor-pointer pt-1 sm:pt-2 h-fit"
               whileHover="hover"
               initial="initial"
             >
-              <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-medium p-6 mb-16 text-center">
+              <h3 className="text-white text-lg sm:text-xl md:text-2xl font-medium p-6 mb-16 text-center">
                 {service.title}
               </h3>
               <motion.div
