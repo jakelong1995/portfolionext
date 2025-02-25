@@ -102,7 +102,7 @@ export default function Projects() {
                         {project.tags.map((tag, index) => (
                           <div
                             key={index}
-                            className="whitespace-nowrap text-sm px-3 py-1 bg-white/10 text-white rounded-full backdrop-blur-lg font-medium"
+                            className="whitespace-nowrap text-sm px-3 py-1 bg-white/30 text-white rounded-full font-medium"
                           >
                             {tag}
                           </div>
