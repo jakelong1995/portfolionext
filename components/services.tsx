@@ -30,7 +30,7 @@ export default function Services() {
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
       />
       <div className="relative z-10 max-w-screen-xl mx-auto px-4">
-        <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium mb-10 sm:mb-16 text-center">
+        <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium mb-10 sm:mb-12 text-center">
           <span className="text-white">My </span> Services
         </div>
 
@@ -38,7 +38,7 @@ export default function Services() {
           {SERVICES.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-[#686868]/20 backdrop-blur-lg rounded-3xl border border-white/20 hover:bg-primary transition-all duration-300 flex flex-col overflow-hidden cursor-pointer pt-1 sm:pt-2"
+              className="bg-[#686868]/20 backdrop-blur-lg rounded-3xl border-2 border-white/20 hover:bg-primary transition-all duration-300 flex flex-col overflow-hidden cursor-pointer pt-1 sm:pt-2"
               whileHover="hover"
               initial="initial"
             >

@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { motion } from "motion/react";
 import { fadeInAnimationVariants } from "./animation";
 import { useSectionInView } from "@/lib/hooks";
 
-export default function Skills() {
+export default function TechStacks() {
   const { ref } = useSectionInView("Skills", 0.5);
   return (
     <section
@@ -15,7 +14,9 @@ export default function Skills() {
       id="skills"
       className="mb-28 max-w-3xl scroll-mt-28 text-center"
     >
-      <SectionHeading>My skills</SectionHeading>
+      <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
+        Tech<span className="text-zinc-900"> Stacks </span>
+      </div>
       <ul className="flex flex-wrap justify-center gap-3 text-lg ">
         {skillsData.map((skill, index) => (
           <motion.li
@@ -29,7 +30,7 @@ export default function Skills() {
             }}
             custom={index}
           >
-            <div className="text-3xl">{skill.image}</div>
+            <div className="text-[40px]">{skill.image}</div>
             <div className="text-sm">{skill.title}</div>
           </motion.li>
         ))}

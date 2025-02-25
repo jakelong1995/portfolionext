@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import SectionHeading from "@/components/section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "motion/react";
 import { Send } from "lucide-react";
@@ -33,7 +32,9 @@ export default function Contact() {
         className="mb-28 max-w-3xl scroll-mt-28 px-4 md:px-6 space-y-6"
       >
         <div className="text-center">
-          <SectionHeading>Get in touch</SectionHeading>
+          <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
+            <span className="text-zinc-900">Get in </span> touch
+          </div>
           <p className="mt-2 text-gray-500 dark:text-gray-400">
             Have a question or want to work together? Fill out the form below
             and we&apos;ll get back to you as soon as possible.

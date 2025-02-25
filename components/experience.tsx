@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
 import { experiencesData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "motion/react";
@@ -12,7 +11,9 @@ export default function Experience() {
   const { ref } = useSectionInView("Experience", 0.5);
   return (
     <section ref={ref} id="experience" className="mb-28 max-w-3xl scroll-mt-28">
-      <SectionHeading>my experience</SectionHeading>
+      <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
+        <span className="text-zinc-900">My </span> Experience
+      </div>
       <ul className="space-y-8">
         {experiencesData.map((experience, index) => (
           <motion.li
@@ -33,7 +34,7 @@ export default function Experience() {
                   aspectRatio: "1/1",
                   objectFit: "contain",
                 }}
-                className="rounded-md shadow w-16 h-16 bg-white"
+                className="rounded-full shadow w-16 h-16 bg-white"
               />
               <div className="flex flex-col space-y-2 items-center sm:items-start">
                 <h3 className="text-xl font-semibold">{experience.title}</h3>
