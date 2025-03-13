@@ -5,12 +5,10 @@ import { experiencesData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { fadeInAnimationVariants } from "./animation";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience", 0.5);
   return (
-    <section ref={ref} id="experience" className="mb-28 max-w-3xl scroll-mt-28">
+    <section id="experience" className="mb-28 max-w-3xl scroll-mt-28">
       <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
         <span className="text-zinc-900">My </span> Experience
       </div>

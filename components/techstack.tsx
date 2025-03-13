@@ -4,20 +4,13 @@ import React from "react";
 import { skillsData } from "@/lib/data";
 import { motion } from "motion/react";
 import { fadeInAnimationVariants } from "./animation";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function TechStacks() {
-  const { ref } = useSectionInView("Skills", 0.5);
-
   // Duplicate the skills data to create a seamless loop
   const duplicatedSkills = [...skillsData, ...skillsData];
 
   return (
-    <section
-      ref={ref}
-      id="skills"
-      className="mb-28 scroll-mt-28 text-center w-full"
-    >
+    <section id="skills" className="mb-28 scroll-mt-28 text-center w-full">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-10 sm:mb-12">
           Tech<span className="text-zinc-900"> Stacks </span>

@@ -4,16 +4,12 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { useSectionInView } from "@/lib/hooks";
 import { motion } from "motion/react";
 import { Mail } from "lucide-react";
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact", 0.5);
-
   return (
     <motion.section
-      ref={ref}
       initial={{
         opacity: 0,
       }}

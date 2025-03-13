@@ -5,14 +5,10 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { fadeInAnimationVariants } from "./animation";
-import { useSectionInView } from "@/lib/hooks";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.5);
-
-  // Define animation variants
   const containerVariants = {
     initial: {
       background: "rgba(0, 0, 0, 0)",
@@ -42,11 +38,7 @@ export default function Projects() {
   };
 
   return (
-    <section
-      ref={ref}
-      id="projects"
-      className="mb-20 max-w-screen-xl scroll-mt-28"
-    >
+    <section id="projects" className="mb-20 max-w-screen-xl scroll-mt-28">
       <div className="container grid px-4 md:px-6">
         <div className="flex justify-between items-center mb-10 sm:mb-12">
           <div className="text-primary text-3xl sm:text-4xl md:text-5xl font-medium text-center">

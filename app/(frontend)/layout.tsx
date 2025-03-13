@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
-import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -23,10 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className}`}>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-        </ActiveSectionContextProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );

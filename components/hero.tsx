@@ -4,13 +4,10 @@ import Image from "next/image";
 import profile from "@/public/profile.png";
 import { Button } from "./ui/button";
 import { ArrowUpRight } from "lucide-react";
-import { useSectionInView } from "@/lib/hooks";
 
 export default function Hero() {
-  const { ref } = useSectionInView("Home", 0.5);
   return (
     <section
-      ref={ref}
       id="home"
       className="h-[100vh] flex max-w-screen-xl flex-col items-center text-center pt-28 overflow-hidden w-full gap-0 relative"
     >

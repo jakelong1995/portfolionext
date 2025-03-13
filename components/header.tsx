@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { links } from "@/lib/data";
 import Link from "next/link";
-import clsx from "clsx";
-import { useActiveSectionContext } from "@/context/active-section-context";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
@@ -17,8 +15,6 @@ import {
 } from "@/components/ui/sheet";
 
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="z-50 fixed top-0 md:top-4 left-1/2 mx-auto w-full">
@@ -34,30 +30,10 @@ export default function Header() {
           {links.map((link) => (
             <div className="relative" key={link.hash}>
               <Link
-                className={clsx("flex items-center justify-center px-8 py-4", {
-                  "font-semibold": activeSection === link.name,
-                  "hover:bg-gray-800 rounded-full transition-colors":
-                    activeSection !== link.name,
-                })}
+                className={"flex items-center justify-center px-8 py-4"}
                 href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
               >
                 {link.name}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-primary rounded-full absolute inset-0 -z-10"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
               </Link>
             </div>
           ))}
@@ -80,7 +56,6 @@ export default function Header() {
                   key={link.hash}
                   href={link.hash}
                   onClick={() => {
-                    setActiveSection(link.name);
                     setIsOpen(false);
                   }}
                   className="px-1 py-3 w-full justify-center text-xl"
