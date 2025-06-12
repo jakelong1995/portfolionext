@@ -7,15 +7,9 @@ import {
   SiAdobephotoshop,
   SiFigma,
   SiFramer,
-  SiGithub,
-  SiMongodb,
   SiNextdotjs,
   SiReact,
   SiTailwindcss,
-  SiTypescript,
-  SiExpress,
-  SiPostman,
-  SiNodedotjs,
 } from "react-icons/si";
 
 import fpt from "@/public/fpt.webp";
@@ -26,13 +20,14 @@ import Go2Joy from "@/public/Go2Joy.png";
 import telos from "@/public/telos.webp";
 import healthy from "@/public/Healthy-casestudy.png";
 import vuifest from "@/public/vuifest.png";
-import greensolution from "@/public/greensolution.png";
 import NRI from "@/public/NRIJapan.png";
 import BFI from "@/public/BFI Finance.png";
 import Pyxissafe from "@/public/PyxisSafe.png";
 import songphi from "@/public/songphi.png";
 import fefyfo from "@/public/Fefyfo.jpg";
 import uplend from "@/public/UPLend.png";
+import storyco from "@/public/storyco.jpeg";
+import sieuthimaypin from "@/public/sieuthimaypin.jpeg";
 
 export const links = [
   {
@@ -59,22 +54,28 @@ export const links = [
 
 export const experiencesData = [
   {
+    company: "Storyco",
+    title: "UI/UX Designer - Design System",
+    image: storyco,
+    date: "Dec 2024 - Now",
+  },
+  {
     company: "FPT Software",
-    title: "Frontend Developer & UX Designer",
+    title: "UI/UX Designer",
     image: fpt,
-    date: "Jan 2021 - Now",
+    date: "Jan 2022 - Aug 2024",
   },
   {
     company: "Go2Joy",
     title: "Product Designer",
     image: g2j,
-    date: "Mar 2020 - Dec 2020",
+    date: "Mar 2021 - Dec 2021",
   },
   {
     company: "ADA Agency",
     title: "Graphic Designer",
     image: ada,
-    date: "Nov 2019 - Feb 2020",
+    date: "Nov 2020 - Feb 2021",
   },
   {
     company: "Capi Academy",
@@ -111,14 +112,14 @@ export const projectsData = [
     link: "https://fefyfo.com/",
     imageUrl: fefyfo,
   },
-  // {
-  //   title: "Gia Phúc Ân - Siêu Thị Máy Pin",
-  //   description:
-  //     "Trải qua hơn 23 năm hình thành và phát triển, Gia Phúc Ân đã vươn lên trở thành đơn vị dẫn đầu trong ngành sản xuất và kinh doanh vật liệu hàn.",
-  //   tags: ["UI-UX", "Development", "E-com"],
-  //   link: "https://sieuthimaypin.com/",
-  //   imageUrl: sieuthimaypin,
-  // },
+  {
+    title: "Gia Phúc Ân - Siêu Thị Máy Pin",
+    description:
+      "Trải qua hơn 23 năm hình thành và phát triển, Gia Phúc Ân đã vươn lên trở thành đơn vị dẫn đầu trong ngành sản xuất và kinh doanh vật liệu hàn.",
+    tags: ["UI-UX", "Development", "E-com"],
+    link: "https://www.figma.com/design/iwcXVoCuTJfHk5DUseq5yX/sieuthimayhan?node-id=23-2137&t=9WWMKCAouRpxW9lw-1",
+    imageUrl: sieuthimaypin,
+  },
   {
     title: "Songphi Brows",
     description:
@@ -188,10 +189,6 @@ export const skillsData = [
     image: React.createElement(SiJavascript),
   },
   {
-    title: "TypeScript",
-    image: React.createElement(SiTypescript),
-  },
-  {
     title: "React",
     image: React.createElement(SiReact),
   },
@@ -202,26 +199,6 @@ export const skillsData = [
   {
     title: "Tailwind",
     image: React.createElement(SiTailwindcss),
-  },
-  {
-    title: "Github",
-    image: React.createElement(SiGithub),
-  },
-  {
-    title: "Node.js",
-    image: React.createElement(SiNodedotjs),
-  },
-  {
-    title: "Express",
-    image: React.createElement(SiExpress),
-  },
-  {
-    title: "Postman",
-    image: React.createElement(SiPostman),
-  },
-  {
-    title: "MongoDB",
-    image: React.createElement(SiMongodb),
   },
   {
     title: "Framer",
