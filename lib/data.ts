@@ -31,7 +31,6 @@ import NRI from "@/public/NRIJapan.png";
 import BFI from "@/public/BFI Finance.png";
 import Pyxissafe from "@/public/PyxisSafe.png";
 import songphi from "@/public/songphi.png";
-import sieuthimaypin from "@/public/sieuthimaypin.jpeg";
 import fefyfo from "@/public/Fefyfo.jpg";
 import uplend from "@/public/UPLend.png";
 
